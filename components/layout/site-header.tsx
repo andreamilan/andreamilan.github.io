@@ -72,7 +72,7 @@ export function SiteHeader() {
               Andrea Milan
             </span>
             <span className="mt-1 text-[11px] text-[var(--text-faint)]">
-              Product leadership
+              Product Leader
             </span>
           </Link>
 

@@ -72,9 +72,11 @@ export default function HomePage() {
       </section>
 
       <section className="container-shell pb-18 sm:pb-24">
-        <div className="max-w-4xl">
+        <div className="max-w-5xl">
           <Reveal>
-            <p className="section-label">Intro</p>
+            <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-strong)] sm:text-3xl">
+              Intro
+            </h2>
           </Reveal>
           <Reveal delay={0.03}>
             <div className="section-rule" />
@@ -82,7 +84,7 @@ export default function HomePage() {
           <div className="mt-7 space-y-5">
             {professionalIntroduction.map((paragraph, index) => (
               <Reveal key={paragraph} delay={index * 0.05}>
-                <p className="reading-measure-wide text-base leading-8 text-[var(--text-soft)] sm:text-[1.08rem] sm:leading-9">
+                <p className="max-w-[52rem] text-base leading-8 text-[var(--text-soft)] sm:text-[1.08rem] sm:leading-9">
                   {paragraph}
                 </p>
               </Reveal>
@@ -94,7 +96,9 @@ export default function HomePage() {
       <section id="experience" className="container-shell section-space">
         <div className="max-w-5xl">
           <Reveal>
-            <p className="section-label">Experience</p>
+            <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-strong)] sm:text-3xl">
+              Experience
+            </h2>
           </Reveal>
           <Reveal delay={0.03}>
             <div className="section-rule" />
@@ -178,9 +182,11 @@ export default function HomePage() {
       </section>
 
       <section id="education" className="container-shell pb-20 sm:pb-24 lg:pb-28">
-        <div className="max-w-4xl">
+        <div className="max-w-5xl">
           <Reveal>
-            <p className="section-label">Education</p>
+            <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-strong)] sm:text-3xl">
+              Education
+            </h2>
           </Reveal>
           <Reveal delay={0.03}>
             <div className="section-rule" />
@@ -213,9 +219,11 @@ export default function HomePage() {
       </section>
 
       <section id="principles" className="container-shell section-space">
-        <div className="max-w-4xl">
+        <div className="max-w-5xl">
           <Reveal>
-            <p className="section-label">How I think</p>
+            <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-strong)] sm:text-3xl">
+              How I think
+            </h2>
           </Reveal>
           <Reveal delay={0.03}>
             <div className="section-rule" />
@@ -245,17 +253,19 @@ export default function HomePage() {
 
       <section id="connect" className="container-shell pb-20 pt-18 sm:pb-24 lg:pb-32">
         <Reveal>
-          <div className="max-w-4xl">
-            <p className="section-label">Connect</p>
+          <div className="max-w-5xl">
+            <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-strong)] sm:text-3xl">
+              Connect
+            </h2>
             <div className="section-rule" />
           </div>
         </Reveal>
         <Reveal delay={0.05}>
-          <div className="max-w-4xl pt-8">
-            <h2 className="reading-measure font-display text-[2.25rem] leading-[0.96] tracking-[-0.055em] text-[var(--text-strong)] sm:text-[3.4rem]">
+          <div className="max-w-5xl pt-8">
+            <h2 className="max-w-[48rem] font-display text-[2.25rem] leading-[0.96] tracking-[-0.055em] text-[var(--text-strong)] sm:text-[3.4rem]">
               The best place to reach me is LinkedIn.
             </h2>
-            <p className="reading-measure mt-4 text-sm leading-7 text-[var(--text-soft)] sm:text-base">
+            <p className="max-w-[46rem] mt-4 text-sm leading-7 text-[var(--text-soft)] sm:text-base">
               Medium is there if you want a little more context first.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-5">
