@@ -20,26 +20,25 @@ export default function HomePage() {
     <SiteFrame>
       <section
         id="intro"
-        className="container-shell pb-14 pt-14 sm:pb-16 sm:pt-16 lg:pb-20 lg:pt-18"
+        className="container-shell pb-16 pt-28 sm:pb-20 sm:pt-32 lg:pb-24 lg:pt-36"
       >
-        <div className="grid gap-8 lg:grid-cols-[1.12fr_0.88fr] lg:items-end lg:gap-8">
+        <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14">
           <HeroIntro>
             <div className="max-w-3xl">
-              <p className="text-sm text-[var(--text-faint)]">
-                Andrea Milan · Head of Product at TheFork
-              </p>
-              <h1 className="mt-4 max-w-3xl font-display text-4xl leading-[0.95] tracking-[-0.055em] text-[var(--text-strong)] sm:text-[3.7rem] lg:text-[4.35rem]">
+              <p className="section-label">Andrea Milan · Head of Product at TheFork</p>
+              <h1 className="mt-6 max-w-3xl font-display text-[2.85rem] leading-[0.92] tracking-[-0.06em] text-[var(--text-strong)] sm:text-[4.3rem] lg:text-[5.15rem]">
                 I believe in products that get clearer as they grow.
               </h1>
-              <p className="reading-measure mt-5 text-[15px] leading-7 text-[var(--text-soft)] sm:text-lg sm:leading-8">
+              <p className="reading-measure mt-6 text-[15px] leading-7 text-[var(--text-soft)] sm:text-[1.05rem] sm:leading-8">
                 {introLead}
               </p>
-              <div className="mt-7 flex flex-wrap items-center gap-4">
+
+              <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Link
                   href={siteConfig.social.linkedin}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex rounded-full border border-[rgba(246,241,232,0.16)] bg-[rgba(246,241,232,0.08)] px-5 py-3 text-sm font-semibold text-[var(--text-strong)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(246,241,232,0.24)] hover:bg-[rgba(246,241,232,0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus)]"
+                  className="inline-flex rounded-full border border-[rgba(246,241,232,0.14)] bg-[rgba(246,241,232,0.08)] px-5 py-3 text-sm font-semibold text-[var(--text-strong)] shadow-[0_16px_40px_rgba(0,0,0,0.14)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(246,241,232,0.24)] hover:bg-[rgba(246,241,232,0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus)]"
                 >
                   Connect on LinkedIn
                 </Link>
@@ -52,31 +51,38 @@ export default function HomePage() {
                   Medium
                 </Link>
               </div>
+
+              <div className="mt-10 max-w-xl border-t border-[rgba(246,241,232,0.08)] pt-5">
+                <p className="text-sm leading-7 text-[var(--text-faint)]">
+                  I work across consumer product, marketplaces, and product
+                  organisations that need sharper judgment, clearer priorities,
+                  and stronger execution.
+                </p>
+              </div>
             </div>
           </HeroIntro>
 
           <Reveal delay={0.08}>
-            <div className="lg:pl-6">
+            <div className="relative lg:pl-8">
+              <div className="pointer-events-none absolute inset-x-[14%] top-[8%] h-[70%] rounded-full bg-[rgba(118,82,255,0.1)] blur-3xl" />
               <HeroPortrait />
             </div>
           </Reveal>
         </div>
       </section>
 
-      <section className="container-shell pb-16 sm:pb-20 lg:pb-24">
+      <section className="container-shell pb-18 sm:pb-24">
         <div className="max-w-4xl">
           <Reveal>
-            <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-strong)] sm:text-3xl">
-              Intro
-            </h2>
+            <p className="section-label">Intro</p>
           </Reveal>
           <Reveal delay={0.03}>
-            <div className="mt-4 border-t border-[var(--line)]" />
+            <div className="section-rule" />
           </Reveal>
-          <div className="mt-6 space-y-5">
+          <div className="mt-7 space-y-5">
             {professionalIntroduction.map((paragraph, index) => (
-              <Reveal key={paragraph} delay={index * 0.06}>
-                <p className="reading-measure-wide text-base leading-8 text-[var(--text-soft)] sm:text-[1.05rem] sm:leading-8">
+              <Reveal key={paragraph} delay={index * 0.05}>
+                <p className="reading-measure-wide text-base leading-8 text-[var(--text-soft)] sm:text-[1.08rem] sm:leading-9">
                   {paragraph}
                 </p>
               </Reveal>
@@ -88,40 +94,37 @@ export default function HomePage() {
       <section id="experience" className="container-shell section-space">
         <div className="max-w-5xl">
           <Reveal>
-            <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-strong)] sm:text-3xl">
-              Experience
-            </h2>
+            <p className="section-label">Experience</p>
           </Reveal>
           <Reveal delay={0.03}>
-            <div className="mt-4 border-t border-[var(--line)]" />
+            <div className="section-rule" />
           </Reveal>
-          <div className="mt-8 space-y-10">
+
+          <div className="mt-10 space-y-12">
             <Reveal>
-              <article className="grid gap-5 rounded-[2rem] border border-[rgba(246,241,232,0.08)] bg-[rgba(255,255,255,0.03)] p-6 shadow-[0_16px_50px_rgba(0,0,0,0.12)] lg:grid-cols-[0.22fr_0.78fr] lg:p-8">
-                <div className="space-y-1">
-                  <p className="text-sm text-[var(--text-faint)]">
-                    {currentRole.period}
-                  </p>
+              <article className="grid gap-6 rounded-[2rem] border border-[rgba(246,241,232,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.025))] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.12)] sm:p-8 lg:grid-cols-[0.24fr_0.76fr]">
+                <div className="space-y-2">
+                  <p className="section-label">{currentRole.period}</p>
                   <p className="text-sm text-[var(--text-faint)]">
                     {currentRole.location}
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-display text-[2rem] tracking-[-0.04em] text-[var(--text-strong)] sm:text-[2.3rem]">
-                    {currentRole.title}
-                  </h3>
-                  <p className="mt-1 text-sm font-semibold tracking-[0.01em] text-[var(--accent)]">
+                  <p className="text-sm font-semibold tracking-[0.08em] text-[var(--accent)] uppercase">
                     {currentRole.company}
                   </p>
-                  <p className="reading-measure mt-4 text-[15px] leading-7 text-[var(--text-soft)] sm:text-[1rem] sm:leading-8">
+                  <h2 className="mt-3 font-display text-[2rem] leading-[0.98] tracking-[-0.05em] text-[var(--text-strong)] sm:text-[2.6rem]">
+                    {currentRole.title}
+                  </h2>
+                  <p className="reading-measure mt-5 text-[15px] leading-7 text-[var(--text-soft)] sm:text-[1rem] sm:leading-8">
                     {currentRole.summary}
                   </p>
                   {currentRole.details ? (
-                    <div className="mt-4 space-y-2">
+                    <div className="mt-6 grid gap-3 sm:gap-4">
                       {currentRole.details.map((detail) => (
                         <p
                           key={detail}
-                          className="reading-measure text-sm leading-6 text-[var(--text-faint)] sm:text-[15px] sm:leading-7"
+                          className="reading-measure text-sm leading-7 text-[var(--text-faint)] sm:text-[15px]"
                         >
                           {detail}
                         </p>
@@ -132,16 +135,22 @@ export default function HomePage() {
               </article>
             </Reveal>
 
-            <Reveal delay={0.2}>
-              <div>
-                <div className="space-y-5">
+            <Reveal delay={0.12}>
+              <div className="rounded-[1.75rem] border border-[rgba(246,241,232,0.06)] bg-[rgba(255,255,255,0.02)] px-5 py-4 sm:px-7 sm:py-5">
+                <div className="space-y-1 pb-5">
+                  <p className="section-label">Previous roles</p>
+                  <p className="text-sm text-[var(--text-faint)]">
+                    Compact by design, but complete.
+                  </p>
+                </div>
+                <div className="divide-y divide-[rgba(246,241,232,0.06)]">
                   {supportingRoles.map((entry) => (
                     <article
                       key={`${entry.company}-${entry.title}`}
-                      className="grid gap-3 lg:grid-cols-[0.22fr_0.78fr]"
+                      className="grid gap-2 py-4 sm:gap-3 lg:grid-cols-[0.22fr_0.28fr_0.5fr]"
                     >
                       <div className="space-y-1">
-                        <p className="text-xs text-[var(--text-faint)] sm:text-sm">
+                        <p className="text-xs uppercase tracking-[0.16em] text-[var(--text-faint)]">
                           {entry.period}
                         </p>
                         <p className="text-xs text-[var(--text-faint)] sm:text-sm">
@@ -149,16 +158,16 @@ export default function HomePage() {
                         </p>
                       </div>
                       <div>
-                        <h3 className="text-base font-semibold tracking-[-0.02em] text-[var(--text-strong)] sm:text-[1.05rem]">
+                        <h3 className="text-[0.98rem] font-semibold tracking-[-0.02em] text-[var(--text-strong)]">
                           {entry.title}
                         </h3>
-                        <p className="mt-1 text-sm font-medium tracking-[0.01em] text-[rgba(219,200,173,0.86)]">
+                        <p className="mt-1 text-sm text-[rgba(219,200,173,0.86)]">
                           {entry.company}
                         </p>
-                        <p className="reading-measure mt-2 text-sm leading-6 text-[var(--text-soft)]">
-                          {entry.summary}
-                        </p>
                       </div>
+                      <p className="reading-measure text-sm leading-6 text-[var(--text-soft)]">
+                        {entry.summary}
+                      </p>
                     </article>
                   ))}
                 </div>
@@ -168,60 +177,65 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="education" className="container-shell pb-20 sm:pb-24 lg:pb-32">
-        <div className="max-w-5xl">
+      <section id="education" className="container-shell pb-20 sm:pb-24 lg:pb-28">
+        <div className="max-w-4xl">
           <Reveal>
-            <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-strong)] sm:text-3xl">
-              Education
-            </h2>
+            <p className="section-label">Education</p>
           </Reveal>
           <Reveal delay={0.03}>
-            <div className="mt-4 border-t border-[var(--line)]" />
+            <div className="section-rule" />
           </Reveal>
-          <div className="mt-6 space-y-4">
-            {education.map((item, index) => (
-              <Reveal key={`${item.school}-${item.degree}`} delay={index * 0.05}>
-                <article className="grid gap-3 lg:grid-cols-[0.22fr_0.78fr]">
-                  <div className="space-y-1">
-                    <p className="text-xs text-[var(--text-faint)] sm:text-sm">
+          <Reveal delay={0.06}>
+            <div className="mt-7 rounded-[1.75rem] border border-[rgba(246,241,232,0.06)] bg-[rgba(255,255,255,0.02)] px-5 py-3 sm:px-7 sm:py-4">
+              <div className="divide-y divide-[rgba(246,241,232,0.06)]">
+                {education.map((item) => (
+                  <article
+                    key={`${item.school}-${item.degree}`}
+                    className="grid gap-2 py-4 lg:grid-cols-[0.24fr_0.76fr]"
+                  >
+                    <p className="text-xs uppercase tracking-[0.16em] text-[var(--text-faint)]">
                       {item.period}
                     </p>
-                  </div>
-                  <div>
-                    <h3 className="text-base font-semibold tracking-[-0.02em] text-[var(--text-strong)] sm:text-[1.05rem]">
-                      {item.school}
-                    </h3>
-                    <p className="mt-2 reading-measure text-sm leading-6 text-[var(--text-faint)]">
-                      {item.degree}
-                    </p>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+                    <div>
+                      <h3 className="text-[0.98rem] font-semibold tracking-[-0.02em] text-[var(--text-strong)]">
+                        {item.school}
+                      </h3>
+                      <p className="mt-1 text-sm leading-6 text-[var(--text-soft)]">
+                        {item.degree}
+                      </p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       <section id="principles" className="container-shell section-space">
-        <div className="max-w-5xl">
+        <div className="max-w-4xl">
           <Reveal>
-            <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-strong)] sm:text-3xl">
-              How I think
-            </h2>
+            <p className="section-label">How I think</p>
           </Reveal>
           <Reveal delay={0.03}>
-            <div className="mt-4 border-t border-[var(--line)]" />
+            <div className="section-rule" />
           </Reveal>
-          <div className="mt-8 max-w-3xl space-y-8">
+
+          <div className="mt-10 space-y-10">
             {principles.map((item, index) => (
-              <Reveal key={item.title} delay={index * 0.06}>
-                <article className="space-y-2">
-                  <h3 className="text-lg font-semibold tracking-[-0.02em] text-[var(--text-strong)] sm:text-xl">
-                    {item.title}
-                  </h3>
-                  <p className="reading-measure text-sm leading-7 text-[var(--text-soft)] sm:text-base">
-                    {item.body}
+              <Reveal key={item.title} delay={index * 0.07}>
+                <article className="grid gap-3 border-t border-[rgba(246,241,232,0.06)] pt-6 sm:grid-cols-[3.5rem_1fr] sm:gap-5">
+                  <p className="font-display text-[1.8rem] leading-none tracking-[-0.05em] text-[rgba(246,241,232,0.34)] sm:text-[2.1rem]">
+                    0{index + 1}
                   </p>
+                  <div className="max-w-2xl">
+                    <h3 className="font-display text-[1.75rem] leading-[1] tracking-[-0.045em] text-[var(--text-strong)] sm:text-[2.2rem]">
+                      {item.title}
+                    </h3>
+                    <p className="reading-measure mt-3 text-sm leading-7 text-[var(--text-soft)] sm:text-base">
+                      {item.body}
+                    </p>
+                  </div>
                 </article>
               </Reveal>
             ))}
@@ -229,29 +243,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="connect" className="container-shell pb-20 pt-20 sm:pb-24 lg:pb-32">
+      <section id="connect" className="container-shell pb-20 pt-18 sm:pb-24 lg:pb-32">
         <Reveal>
           <div className="max-w-4xl">
-            <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-strong)] sm:text-3xl">
-              Connect
-            </h2>
-            <div className="mt-4 border-t border-[var(--line)]" />
+            <p className="section-label">Connect</p>
+            <div className="section-rule" />
           </div>
         </Reveal>
         <Reveal delay={0.05}>
           <div className="max-w-4xl pt-8">
-            <h2 className="reading-measure font-display text-3xl leading-[0.98] tracking-[-0.05em] text-[var(--text-strong)] sm:text-4xl">
+            <h2 className="reading-measure font-display text-[2.25rem] leading-[0.96] tracking-[-0.055em] text-[var(--text-strong)] sm:text-[3.4rem]">
               The best place to reach me is LinkedIn.
             </h2>
             <p className="reading-measure mt-4 text-sm leading-7 text-[var(--text-soft)] sm:text-base">
               Medium is there if you want a little more context first.
             </p>
-            <div className="mt-7 flex flex-wrap items-center gap-5">
+            <div className="mt-8 flex flex-wrap items-center gap-5">
               <Link
                 href={siteConfig.social.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex rounded-full border border-[rgba(246,241,232,0.16)] bg-[rgba(246,241,232,0.08)] px-5 py-3 text-sm font-semibold text-[var(--text-strong)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(246,241,232,0.24)] hover:bg-[rgba(246,241,232,0.12)]"
+                className="inline-flex rounded-full border border-[rgba(246,241,232,0.14)] bg-[rgba(246,241,232,0.08)] px-5 py-3 text-sm font-semibold text-[var(--text-strong)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(246,241,232,0.24)] hover:bg-[rgba(246,241,232,0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus)]"
               >
                 Connect on LinkedIn
               </Link>

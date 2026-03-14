@@ -27,6 +27,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -47,9 +48,9 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(123, 81, 255, 0.14), transparent 34%),
-    radial-gradient(circle at 85% 14%, rgba(194, 118, 86, 0.12), transparent 24%),
-    linear-gradient(180deg, #14111d 0%, #100e18 55%, #12101a 100%);
+    radial-gradient(circle at top left, rgba(123, 81, 255, 0.12), transparent 32%),
+    radial-gradient(circle at 85% 14%, rgba(194, 118, 86, 0.1), transparent 22%),
+    linear-gradient(180deg, #14111d 0%, #100e18 48%, #0f0d16 100%);
   color: var(--ink);
   font-family: "Manrope Variable", "Avenir Next", "Segoe UI", sans-serif;
   text-rendering: optimizeLegibility;
@@ -83,6 +84,14 @@ a {
   @apply py-20 sm:py-24 lg:py-32;
 }
 
+.section-label {
+  @apply text-[11px] uppercase tracking-[0.2em] text-[var(--text-faint)];
+}
+
+.section-rule {
+  @apply mt-4 h-px w-full bg-[var(--line)];
+}
+
 .reading-measure {
   max-width: 38rem;
 }
@@ -92,7 +101,7 @@ a {
 }
 
 .ambient-orb {
-  animation: ambient-drift 16s ease-in-out infinite;
+  animation: ambient-drift 20s ease-in-out infinite;
 }
 
 .interactive-link {

@@ -4,8 +4,9 @@ import { siteConfig } from "@/content/site";
 export function SiteFooter() {
   return (
     <footer className="border-t border-[rgba(235,230,221,0.08)]">
-      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-10 sm:px-8 lg:grid-cols-[1.4fr_0.6fr] lg:px-10">
+      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-10 sm:px-8 lg:grid-cols-[1.2fr_0.8fr] lg:px-10">
         <div className="space-y-3">
+          <p className="section-label">Andrea Milan</p>
           <p className="font-display text-2xl tracking-[-0.04em] text-[var(--text-strong)]">
             Andrea Milan
           </p>
@@ -15,7 +16,7 @@ export function SiteFooter() {
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-4 lg:justify-end">
+        <div className="flex flex-wrap items-end gap-4 lg:justify-end">
           <Link
             href={siteConfig.social.linkedin}
             target="_blank"
