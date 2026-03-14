@@ -97,7 +97,7 @@ export default function HomePage() {
           </Reveal>
           <div className="mt-8 space-y-10">
             <Reveal>
-              <article className="grid gap-4 lg:grid-cols-[0.22fr_0.78fr]">
+              <article className="grid gap-5 rounded-[2rem] border border-[rgba(246,241,232,0.08)] bg-[rgba(255,255,255,0.03)] p-6 shadow-[0_16px_50px_rgba(0,0,0,0.12)] lg:grid-cols-[0.22fr_0.78fr] lg:p-8">
                 <div className="space-y-1">
                   <p className="text-sm text-[var(--text-faint)]">
                     {currentRole.period}
@@ -134,7 +134,7 @@ export default function HomePage() {
 
             <Reveal delay={0.2}>
               <div>
-                <div className="space-y-6">
+                <div className="space-y-5">
                   {supportingRoles.map((entry) => (
                     <article
                       key={`${entry.company}-${entry.title}`}
@@ -152,7 +152,7 @@ export default function HomePage() {
                         <h3 className="text-base font-semibold tracking-[-0.02em] text-[var(--text-strong)] sm:text-[1.05rem]">
                           {entry.title}
                         </h3>
-                        <p className="mt-1 text-sm font-semibold tracking-[0.01em] text-[var(--accent)]">
+                        <p className="mt-1 text-sm font-medium tracking-[0.01em] text-[rgba(219,200,173,0.86)]">
                           {entry.company}
                         </p>
                         <p className="reading-measure mt-2 text-sm leading-6 text-[var(--text-soft)]">
@@ -178,7 +178,7 @@ export default function HomePage() {
           <Reveal delay={0.03}>
             <div className="mt-4 border-t border-[var(--line)]" />
           </Reveal>
-          <div className="mt-6 space-y-3">
+          <div className="mt-6 space-y-4">
             {education.map((item, index) => (
               <Reveal key={`${item.school}-${item.degree}`} delay={index * 0.05}>
                 <article className="grid gap-3 lg:grid-cols-[0.22fr_0.78fr]">
@@ -191,7 +191,7 @@ export default function HomePage() {
                     <h3 className="text-base font-semibold tracking-[-0.02em] text-[var(--text-strong)] sm:text-[1.05rem]">
                       {item.school}
                     </h3>
-                    <p className="mt-2 text-sm leading-6 text-[var(--text-faint)]">
+                    <p className="mt-2 reading-measure text-sm leading-6 text-[var(--text-faint)]">
                       {item.degree}
                     </p>
                   </div>
@@ -212,10 +212,10 @@ export default function HomePage() {
           <Reveal delay={0.03}>
             <div className="mt-4 border-t border-[var(--line)]" />
           </Reveal>
-          <div className="mt-8 space-y-7">
+          <div className="mt-8 max-w-3xl space-y-8">
             {principles.map((item, index) => (
               <Reveal key={item.title} delay={index * 0.06}>
-                <article className="max-w-3xl space-y-2">
+                <article className="space-y-2">
                   <h3 className="text-lg font-semibold tracking-[-0.02em] text-[var(--text-strong)] sm:text-xl">
                     {item.title}
                   </h3>
