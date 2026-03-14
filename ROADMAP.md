@@ -1,14 +1,15 @@
 # Short-Term
-- Refine the one-page editorial design
-- Improve spacing, typography, and mobile polish
-- Tune motion and hover details without adding weight
-- Add favicon and social preview assets
+- Refine section composition and spacing
+- Improve Experience and Education consistency
+- Further polish motion and hover interactions
+- Finalize mobile quality and text rhythm
+- Prepare deployment and publishing assets
 
 ## Mid-Term
-- Consider a sanitized CV download
-- Explore a small selected-work section only if it fits the narrative
+- Add favicon and social preview assets
 - Improve metadata and share presentation
+- Consider a sanitized CV download if a safe copy exists
 
 ## Long-Term
-- Add deeper editorial layers such as talks, interviews, or selected case studies
-- Introduce richer storytelling only if it preserves the simplicity of the one-page architecture
+- Explore small editorial extensions only if they preserve the simplicity of the one-page architecture
+- Consider selected case studies only if they do not break the current calm structure

@@ -1,42 +1,46 @@
 # Architecture Overview
 
-The site uses a single-page Next.js App Router setup with static export enabled. Content is stored in TypeScript modules and rendered through a small set of reusable sections with a consistent editorial pattern: title, separator, then content.
+The site uses a single-page Next.js App Router setup with static export enabled. It is organized as anchored editorial sections with a simple, repeatable structure: title, separator, and content block.
 
 ## Structure
-- `app/page.tsx` contains the anchored one-page experience
-- `components/layout/` contains the shell, nav, footer, and transitions
-- `components/ui/` contains only lightweight shared UI helpers
-- `content/` holds curated profile and lightweight writing content
+- `app/page.tsx` contains the full one-page experience
+- `components/layout/` contains nav, shell, and footer
+- `components/ui/` contains lightweight motion and hero helpers
+- `content/` contains curated profile content and navigation data
+- `public/` contains static assets including the hero portrait
+
+## Page Composition
+- Hero with portrait and primary CTA
+- Short intro framing
+- Experience section
+  - Only `Head of Product` is featured
+  - All previous roles use compact consistent rows
+- Education section with the same editorial row logic
+- `How I think` as a stacked principle list
+- Connect section with LinkedIn as the main CTA
 
 ## Rendering Strategy
 - Static generation for the full site
 - Server components by default
-- Client components only where motion or active navigation improves the experience
+- Client components only where motion or anchored nav behavior improves the experience
 
-## Visual System Strategy
-- Dark mode by default
-- Material Design 3 informs spacing, motion, and surface logic
-- Typography and rhythm carry most of the hierarchy
-- Use fewer containers with more intentional differences in scale and density
-- Optimize for scanability and comfortable text measure on mobile
-
-## Motion Strategy
-- Smooth anchored scrolling
-- Subtle reveal motion
-- Light active nav feedback
-- Restrained hover feedback
-- Ambient background movement only if it stays extremely soft
+## Motion Layer
+- Motion is a core part of the experience
+- Use subtle reveal motion, soft hover polish, and restrained active navigation feedback
+- Avoid gimmicks, heavy animation systems, and startup-marketing effects
 - Respect `prefers-reduced-motion`
 
 ## GitHub Pages Constraints
 - `output: "export"`
 - `trailingSlash: true`
-- unoptimized images for static compatibility
-- no API routes, middleware, or runtime server features
+- unoptimized images for static hosting
+- no API routes
+- no middleware
+- no backend features
+- no runtime SSR requirements
 
 ## Non-Goals
-- Multi-page IA
-- App-like navigation chrome
-- Repeated card galleries
-- Heavy animation systems
+- Multi-page structure
+- Writing archive UI
+- Component gallery feel
 - Server-backed features

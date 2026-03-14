@@ -1,27 +1,27 @@
 # Current State
 
-- The project has been redesigned from a multi-page personal site into a single-page editorial homepage.
-- Dark mode is now the default visual direction.
-- The page now follows a cleaner section structure: Hero, Intro, Experience, Education, How I think, Connect.
-- Medium is now intentionally minimal and appears only as a secondary link rather than a standalone section.
-- Motion and interactions are a core part of the current polish pass.
-- The site remains fully static and GitHub Pages compatible.
+- The project is locked into a dark, single-page editorial personal-site direction.
+- The current role, Head of Product, is the only featured career entry.
+- Writing no longer exists as a standalone section; Medium is only a subtle secondary link.
+- Education is separated from Experience.
+- The hero includes a portrait and a compact first-person thesis.
+- The multilingual greeting was implemented and then removed.
+- The hierarchy has been simplified and made more consistent across sections.
+- The project is nearing a ready-to-ship state, with remaining work focused on composition refinement and motion polish.
 
 ## Agreed Direction
 - Personal editorial feeling over SaaS-like structure
-- Fewer CTAs, fewer pills, fewer repeated cards
-- Timeline-led experience section with all roles included
-- Writing kept intentionally compact
-- About replaced by principles
-- Contact simplified into a closing section
+- Strong hierarchy with one featured current role
+- Compact prior roles and concise education treatment
 - First-person voice throughout
-- Mobile readability is a priority, not a follow-up task
+- Motion quality treated as a core UX layer
+- LinkedIn as the main CTA
 
 ## Open Questions
-- Whether a sanitized downloadable CV should be introduced later
-- Whether future iterations should add selected case studies without breaking the one-page rhythm
-- Whether a future pass should trim copy even further after browser review
+- Whether a sanitized CV download should be added later
+- Whether any final section-composition trim is needed after browser review
+- Whether motion should be tuned further after device testing
 
 ## Assumptions
 - Andrea's GitHub Pages site is the root user site, so production base path is empty
-- The current Medium links remain valid public writing destinations
+- Medium remains only a supporting public link, not a content pillar

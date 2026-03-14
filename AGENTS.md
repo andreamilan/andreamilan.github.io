@@ -1,44 +1,53 @@
 # Andrea Milan Website Project Guide
 
 ## Project Goal
-- Build a single-page personal website for Andrea Milan that feels like an editorial biography rather than a resume or SaaS landing page.
-- Prioritize elegance, narrative flow, and strong visual authorship before any advanced functionality.
-- Present Andrea as a thoughtful product leader with taste, clarity, and a credible international track record.
+- Build a personal website for Andrea Milan that feels editorial, premium, calm, and modern.
+- Avoid SaaS portfolio patterns, product-marketing structure, and resume-dump density.
+- Prioritize design quality, motion polish, and readability over content volume.
 
-## Experience Principles
-- Dark mode is the default visual foundation.
-- The site should feel personal, atmospheric, and typography-led.
-- Use Material Design 3 as a systems guide for spacing, motion, shape, and elevation, but not as a literal visual template.
-- Prefer lighter reading effort, selective emphasis, and asymmetry over repeated equal-weight components.
+## Product Shape
+- Single-page website with anchored sections.
+- Dark mode is the default visual direction.
+- Intended page structure:
+  - Hero
+  - Intro
+  - Experience
+  - Education
+  - How I think
+  - Connect
+  - Footer
 
 ## Content Rules
-- Use the provided LinkedIn PDF as the primary source for professional history and education.
-- Include all job experiences and all education entries.
-- Curate and summarize; never mirror LinkedIn bullet-for-bullet.
-- Keep all visible site copy in first person.
-- Keep writing coverage to a light Medium mention and link rather than an article archive.
+- All visible copy must be in first person.
+- Tone should be personal, sharp, calm, and concise.
+- Avoid third-person biography tone, long text blocks, and over-explanation.
+- Include all work experiences and all education entries from the source material.
+- Feature only the current role with larger scale and richer context.
+- Keep all previous roles compact and action-led.
+- Medium should appear only as a subtle secondary link, not as its own content section.
 - Do not publish Andrea's email address or add a contact form.
-- Only publish a downloadable CV if a sanitized copy exists with no private email address.
 
-## Architecture Rules
-- Single-page structure with anchored sections.
-- Page structure: Hero, short intro, Experience, Education, How I think, Connect, Footer.
-- Static export only, with GitHub Pages compatibility from day one.
-- Server components by default; minimal client-side JavaScript.
-- Prefer reusable section primitives and content modules over page-specific complexity.
-- Remove or avoid routes that reintroduce a multi-page marketing-site feel.
-- Prioritize mobile readability and scanability in every iteration.
+## Design Rules
+- The hero should be compact, balanced, and visually clean.
+- The hero portrait is part of the intended final direction.
+- Section hierarchy should rely on simple editorial structure: title, separator, then content.
+- Use consistency of layout to create calmness and readability.
+- Avoid component-gallery repetition, heavy chrome, and unnecessary visual clutter.
 
-## Navigation And CTA Rules
-- Use a compact anchored navigation: Intro, Experience, Education, How I think, Connect.
-- Keep CTA density very low.
-- One main LinkedIn CTA near the top.
-- Keep Medium only as a subtle secondary link in hero, connect, or footer.
-- One calm connection CTA at the bottom.
+## Motion Rules
+- Motion quality is a major priority.
+- Interactions should feel elegant, subtle, and premium.
+- Avoid gimmicks, startup-marketing animation, or noisy effects.
+- Always respect `prefers-reduced-motion`.
+
+## Technical Rules
+- Stack: Next.js App Router, TypeScript, Tailwind CSS, Framer Motion.
+- Static export only.
+- Must remain fully compatible with GitHub Pages.
+- No server runtime, API routes, middleware, backend features, or runtime SSR requirements.
 
 ## Workflow Rules
-- Keep docs aligned with the current product direction.
-- Choose editorial clarity over feature growth.
-- Avoid repeated chips, pills, cards, and boxed modules unless they clearly improve hierarchy.
-- Use motion and interaction to add polish, not noise.
-- When tradeoffs appear, prioritize elegant motion, brevity, scanability, mobile quality, speed, and GitHub Pages compatibility.
+- Keep docs aligned with the actual product direction.
+- Prefer clarity and finish over adding more sections or content.
+- Treat mobile readability as a core requirement, not a later polish step.
+- When tradeoffs appear, prioritize elegance, motion quality, readability, performance, and GitHub Pages compatibility.

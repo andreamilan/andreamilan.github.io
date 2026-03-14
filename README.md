@@ -1,6 +1,6 @@
 # Andrea Milan Personal Website
 
-A dark, single-page editorial website for Andrea Milan, built as a fast static Next.js site for GitHub Pages. The project is designed to feel like a modern personal signature page: concise, mobile-friendly, and polished through restrained motion.
+A dark, single-page editorial personal website for Andrea Milan, built as a static Next.js site for GitHub Pages. The site is designed to feel personal, premium, calm, and modern, with concise content, a featured current role, and restrained motion polish.
 
 ## Stack
 - Next.js App Router
@@ -22,26 +22,27 @@ A dark, single-page editorial website for Andrea Milan, built as a fast static N
 - Hosting: GitHub Pages
 - Rendering model: fully static export
 
-## Structure
+## Current Structure
 - `app/` single-page route, layout, and global styles
 - `components/` layout and lightweight UI primitives
-- `content/` curated profile and writing content
-- `public/` static Pages-compatible assets
+- `content/` curated profile content and lightweight secondary-link data
+- `public/` static assets including the hero portrait
 - `.github/workflows/` deployment automation
 
 ## Current Product Shape
-- One-page anchored navigation
-- Hero, Intro, Experience, Education, How I think, and Connect sections
+- Single-page anchored navigation
+- Hero, Intro, Experience, Education, How I think, Connect, Footer
 - Dark-mode default visual system
-- Editorial timeline for the full career path
-- Medium kept as a subtle secondary link rather than a standalone section
-- First-person voice throughout
-- Motion-led polish with restrained interactions
+- Current role featured as the main career entry
+- Medium kept as a subtle secondary link only
+- No standalone Writing, About, or Contact pages
+- First-person copy throughout
+- Premium but restrained motion and interaction design
 
 ## Non-Goals
-- Multi-page personal site architecture
-- CMS integration
+- Multi-page portfolio structure
+- SaaS-style landing page patterns
+- Article cards or writing archive UI
 - Contact forms
 - Backend features
-- Dynamic blog engine
-- Over-designed component galleries
+- Server-dependent rendering
