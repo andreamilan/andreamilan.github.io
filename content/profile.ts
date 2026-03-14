@@ -79,15 +79,6 @@ export const timeline: TimelineEntry[] = [
     emphasis: "supporting"
   },
   {
-    company: "Talent Garden Innovation School",
-    title: "Lecturer, Digital Product Management",
-    location: "Milan, Italy",
-    period: "2020 - 2021",
-    summary:
-      "Taught product metrics and OKRs, and mentored students through practical product work.",
-    emphasis: "supporting"
-  },
-  {
     company: "Jobtome",
     title: "Product Manager",
     location: "Stabio, Switzerland",

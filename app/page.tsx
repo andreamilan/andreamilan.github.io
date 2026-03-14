@@ -51,14 +51,6 @@ export default function HomePage() {
                   Medium
                 </Link>
               </div>
-
-              <div className="mt-10 max-w-xl border-t border-[rgba(246,241,232,0.08)] pt-5">
-                <p className="text-sm leading-7 text-[var(--text-faint)]">
-                  I work across consumer product, marketplaces, and product
-                  organisations that need sharper judgment, clearer priorities,
-                  and stronger execution.
-                </p>
-              </div>
             </div>
           </HeroIntro>
 
@@ -84,7 +76,7 @@ export default function HomePage() {
           <div className="mt-7 space-y-5">
             {professionalIntroduction.map((paragraph, index) => (
               <Reveal key={paragraph} delay={index * 0.05}>
-                <p className="max-w-[52rem] text-base leading-8 text-[var(--text-soft)] sm:text-[1.08rem] sm:leading-9">
+                <p className="max-w-none text-base leading-8 text-[var(--text-soft)] sm:text-[1.08rem] sm:leading-9">
                   {paragraph}
                 </p>
               </Reveal>
@@ -236,11 +228,11 @@ export default function HomePage() {
                   <p className="font-display text-[1.8rem] leading-none tracking-[-0.05em] text-[rgba(246,241,232,0.34)] sm:text-[2.1rem]">
                     0{index + 1}
                   </p>
-                  <div className="max-w-2xl">
+                  <div>
                     <h3 className="font-display text-[1.75rem] leading-[1] tracking-[-0.045em] text-[var(--text-strong)] sm:text-[2.2rem]">
                       {item.title}
                     </h3>
-                    <p className="reading-measure mt-3 text-sm leading-7 text-[var(--text-soft)] sm:text-base">
+                    <p className="max-w-none mt-3 text-sm leading-7 text-[var(--text-soft)] sm:text-base">
                       {item.body}
                     </p>
                   </div>
@@ -262,10 +254,10 @@ export default function HomePage() {
         </Reveal>
         <Reveal delay={0.05}>
           <div className="max-w-5xl pt-8">
-            <h2 className="max-w-[48rem] font-display text-[2.25rem] leading-[0.96] tracking-[-0.055em] text-[var(--text-strong)] sm:text-[3.4rem]">
+            <h2 className="max-w-none font-display text-[2.25rem] leading-[0.96] tracking-[-0.055em] text-[var(--text-strong)] sm:text-[3.4rem]">
               The best place to reach me is LinkedIn.
             </h2>
-            <p className="max-w-[46rem] mt-4 text-sm leading-7 text-[var(--text-soft)] sm:text-base">
+            <p className="max-w-none mt-4 text-sm leading-7 text-[var(--text-soft)] sm:text-base">
               Medium is there if you want a little more context first.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-5">
