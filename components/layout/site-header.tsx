@@ -68,16 +68,16 @@ export function SiteHeader() {
       <header className="pointer-events-none absolute inset-x-0 top-0 z-40">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 pb-4 pt-5 sm:px-8 sm:pt-7 lg:px-10">
           <Link href="#intro" className="pointer-events-auto inline-flex flex-col">
-            <span className="text-sm font-medium tracking-[0.08em] text-[var(--text-strong)] uppercase">
+            <span className="text-[0.82rem] font-medium uppercase tracking-[0.16em] text-[var(--text-strong)]">
               Andrea Milan
             </span>
-            <span className="mt-1 text-[11px] text-[var(--text-faint)]">
+            <span className="meta-copy mt-1">
               Product Leader
             </span>
           </Link>
 
           <div className="pointer-events-auto flex items-center gap-3">
-            <span className="hidden text-[12px] text-[var(--text-faint)] sm:inline">
+            <span className="meta-copy hidden sm:inline">
               Milan, Italy
             </span>
             <Link
@@ -106,7 +106,7 @@ export function SiteHeader() {
                 <div className="flex items-center gap-3">
                   <Link
                     href={activeItem.href}
-                    className="rounded-full px-3 py-2 text-[12px] font-medium text-[var(--text-strong)] transition duration-300 hover:bg-[rgba(255,255,255,0.05)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus)]"
+                    className="rounded-full px-3 py-2 text-[0.78rem] font-medium text-[var(--text-strong)] transition duration-300 hover:bg-[rgba(255,255,255,0.05)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus)]"
                   >
                     {activeItem.label}
                   </Link>
@@ -114,7 +114,7 @@ export function SiteHeader() {
                   <button
                     type="button"
                     onClick={() => setMenuOpen((open) => !open)}
-                    className="rounded-full px-3 py-2 text-[12px] text-[var(--text-soft)] transition duration-300 hover:bg-[rgba(255,255,255,0.05)] hover:text-[var(--text-strong)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus)]"
+                    className="rounded-full px-3 py-2 text-[0.78rem] text-[var(--text-soft)] transition duration-300 hover:bg-[rgba(255,255,255,0.05)] hover:text-[var(--text-strong)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus)]"
                     aria-expanded={menuOpen}
                     aria-controls="section-menu"
                   >
@@ -144,7 +144,7 @@ export function SiteHeader() {
                           key={item.href}
                           href={item.href}
                           onClick={() => setMenuOpen(false)}
-                          className={`rounded-[1.1rem] px-4 py-3 text-sm transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus)] ${
+                          className={`rounded-[1.1rem] px-4 py-3 text-[0.95rem] transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus)] ${
                             isActive
                               ? "bg-[rgba(255,255,255,0.06)] text-[var(--text-strong)]"
                               : "text-[var(--text-soft)] hover:bg-[rgba(255,255,255,0.04)] hover:text-[var(--text-strong)]"

@@ -26,10 +26,10 @@ export default function HomePage() {
           <HeroIntro>
             <div className="max-w-3xl">
               <p className="section-label">Andrea Milan · Head of Product at TheFork</p>
-              <h1 className="mt-6 max-w-3xl font-display text-[2.85rem] leading-[0.92] tracking-[-0.06em] text-[var(--text-strong)] sm:text-[4.3rem] lg:text-[5.15rem]">
+              <h1 className="display-copy mt-6 max-w-3xl text-[2.85rem] leading-[0.92] sm:text-[4.3rem] lg:text-[5.15rem]">
                 I believe in products that get clearer as they grow.
               </h1>
-              <p className="reading-measure mt-6 text-[15px] leading-7 text-[var(--text-soft)] sm:text-[1.05rem] sm:leading-8">
+              <p className="body-copy reading-measure mt-6">
                 {introLead}
               </p>
 
@@ -46,7 +46,7 @@ export default function HomePage() {
                   href={siteConfig.social.medium}
                   target="_blank"
                   rel="noreferrer"
-                  className="interactive-link text-sm text-[var(--text-soft)] transition duration-300 hover:text-[var(--text-strong)]"
+                  className="interactive-link supporting-copy transition duration-300 hover:text-[var(--text-strong)]"
                 >
                   Medium
                 </Link>
@@ -63,10 +63,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-shell pb-18 sm:pb-24">
+      <section className="container-shell pb-20 sm:pb-24 lg:pb-28">
         <div className="max-w-5xl">
           <Reveal>
-            <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-strong)] sm:text-3xl">
+            <h2 className="section-title">
               Intro
             </h2>
           </Reveal>
@@ -76,7 +76,7 @@ export default function HomePage() {
           <div className="mt-7 space-y-5">
             {professionalIntroduction.map((paragraph, index) => (
               <Reveal key={paragraph} delay={index * 0.05}>
-                <p className="max-w-none text-base leading-8 text-[var(--text-soft)] sm:text-[1.08rem] sm:leading-9">
+                <p className="body-copy max-w-none">
                   {paragraph}
                 </p>
               </Reveal>
@@ -85,10 +85,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="experience" className="container-shell section-space">
+      <section
+        id="experience"
+        className="container-shell pb-20 sm:pb-24 lg:pb-28"
+      >
         <div className="max-w-5xl">
           <Reveal>
-            <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-strong)] sm:text-3xl">
+            <h2 className="section-title">
               Experience
             </h2>
           </Reveal>
@@ -100,19 +103,19 @@ export default function HomePage() {
             <Reveal>
               <article className="grid gap-6 rounded-[2rem] border border-[rgba(246,241,232,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.025))] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.12)] sm:p-8 lg:grid-cols-[0.24fr_0.76fr]">
                 <div className="space-y-2">
-                  <p className="section-label">{currentRole.period}</p>
-                  <p className="text-sm text-[var(--text-faint)]">
+                  <p className="meta-copy">{currentRole.period}</p>
+                  <p className="meta-detail">
                     {currentRole.location}
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-semibold tracking-[0.08em] text-[var(--accent)] uppercase">
+                  <p className="accent-copy">
                     {currentRole.company}
                   </p>
-                  <h2 className="mt-3 font-display text-[2rem] leading-[0.98] tracking-[-0.05em] text-[var(--text-strong)] sm:text-[2.6rem]">
+                  <h3 className="display-copy mt-3 text-[2rem] leading-[0.98] sm:text-[2.6rem]">
                     {currentRole.title}
-                  </h2>
-                  <p className="reading-measure mt-5 text-[15px] leading-7 text-[var(--text-soft)] sm:text-[1rem] sm:leading-8">
+                  </h3>
+                  <p className="body-copy reading-measure mt-5">
                     {currentRole.summary}
                   </p>
                   {currentRole.details ? (
@@ -120,7 +123,7 @@ export default function HomePage() {
                       {currentRole.details.map((detail) => (
                         <p
                           key={detail}
-                          className="reading-measure text-sm leading-7 text-[var(--text-faint)] sm:text-[15px]"
+                          className="meta-detail reading-measure leading-7"
                         >
                           {detail}
                         </p>
@@ -135,7 +138,7 @@ export default function HomePage() {
               <div className="rounded-[1.75rem] border border-[rgba(246,241,232,0.06)] bg-[rgba(255,255,255,0.02)] px-5 py-4 sm:px-7 sm:py-5">
                 <div className="space-y-1 pb-5">
                   <p className="section-label">Previous roles</p>
-                  <p className="text-sm text-[var(--text-faint)]">
+                  <p className="meta-detail">
                     Compact by design, but complete.
                   </p>
                 </div>
@@ -146,22 +149,22 @@ export default function HomePage() {
                       className="grid gap-2 py-4 sm:gap-3 lg:grid-cols-[0.22fr_0.28fr_0.5fr]"
                     >
                       <div className="space-y-1">
-                        <p className="text-xs uppercase tracking-[0.16em] text-[var(--text-faint)]">
+                        <p className="meta-copy">
                           {entry.period}
                         </p>
-                        <p className="text-xs text-[var(--text-faint)] sm:text-sm">
+                        <p className="meta-detail">
                           {entry.location}
                         </p>
                       </div>
                       <div>
-                        <h3 className="text-[0.98rem] font-semibold tracking-[-0.02em] text-[var(--text-strong)]">
+                        <h3 className="text-[1rem] font-semibold tracking-[-0.02em] text-[var(--text-strong)]">
                           {entry.title}
                         </h3>
-                        <p className="mt-1 text-sm text-[rgba(219,200,173,0.86)]">
+                        <p className="accent-copy mt-1">
                           {entry.company}
                         </p>
                       </div>
-                      <p className="reading-measure text-sm leading-6 text-[var(--text-soft)]">
+                      <p className="supporting-copy reading-measure">
                         {entry.summary}
                       </p>
                     </article>
@@ -173,10 +176,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="education" className="container-shell pb-20 sm:pb-24 lg:pb-28">
+      <section
+        id="education"
+        className="container-shell pb-20 sm:pb-24 lg:pb-28"
+      >
         <div className="max-w-5xl">
           <Reveal>
-            <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-strong)] sm:text-3xl">
+            <h2 className="section-title">
               Education
             </h2>
           </Reveal>
@@ -191,14 +197,14 @@ export default function HomePage() {
                     key={`${item.school}-${item.degree}`}
                     className="grid gap-2 py-4 lg:grid-cols-[0.24fr_0.76fr]"
                   >
-                    <p className="text-xs uppercase tracking-[0.16em] text-[var(--text-faint)]">
+                    <p className="meta-copy">
                       {item.period}
                     </p>
                     <div>
-                      <h3 className="text-[0.98rem] font-semibold tracking-[-0.02em] text-[var(--text-strong)]">
+                      <h3 className="text-[1rem] font-semibold tracking-[-0.02em] text-[var(--text-strong)]">
                         {item.school}
                       </h3>
-                      <p className="mt-1 text-sm leading-6 text-[var(--text-soft)]">
+                      <p className="supporting-copy mt-1 leading-6">
                         {item.degree}
                       </p>
                     </div>
@@ -210,10 +216,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="principles" className="container-shell section-space">
+      <section
+        id="principles"
+        className="container-shell pb-20 sm:pb-24 lg:pb-28"
+      >
         <div className="max-w-5xl">
           <Reveal>
-            <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-strong)] sm:text-3xl">
+            <h2 className="section-title">
               How I think
             </h2>
           </Reveal>
@@ -225,14 +234,14 @@ export default function HomePage() {
             {principles.map((item, index) => (
               <Reveal key={item.title} delay={index * 0.07}>
                 <article className="grid gap-3 border-t border-[rgba(246,241,232,0.06)] pt-6 sm:grid-cols-[3.5rem_1fr] sm:gap-5">
-                  <p className="font-display text-[1.8rem] leading-none tracking-[-0.05em] text-[rgba(246,241,232,0.34)] sm:text-[2.1rem]">
+                  <p className="display-copy text-[1.8rem] leading-none text-[rgba(246,241,232,0.34)] sm:text-[2.1rem]">
                     0{index + 1}
                   </p>
                   <div>
-                    <h3 className="font-display text-[1.75rem] leading-[1] tracking-[-0.045em] text-[var(--text-strong)] sm:text-[2.2rem]">
+                    <h3 className="display-copy text-[1.75rem] leading-[1] sm:text-[2.2rem]">
                       {item.title}
                     </h3>
-                    <p className="max-w-none mt-3 text-sm leading-7 text-[var(--text-soft)] sm:text-base">
+                    <p className="body-copy max-w-none mt-3">
                       {item.body}
                     </p>
                   </div>
@@ -243,10 +252,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="connect" className="container-shell pb-20 pt-18 sm:pb-24 lg:pb-32">
+      <section
+        id="connect"
+        className="container-shell pb-20 sm:pb-24 lg:pb-28"
+      >
         <Reveal>
           <div className="max-w-5xl">
-            <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-strong)] sm:text-3xl">
+            <h2 className="section-title">
               Connect
             </h2>
             <div className="section-rule" />
@@ -254,10 +266,10 @@ export default function HomePage() {
         </Reveal>
         <Reveal delay={0.05}>
           <div className="max-w-5xl pt-8">
-            <h2 className="max-w-none font-display text-[2.25rem] leading-[0.96] tracking-[-0.055em] text-[var(--text-strong)] sm:text-[3.4rem]">
+            <h2 className="display-copy max-w-none text-[2.25rem] leading-[0.96] sm:text-[3.4rem]">
               The best place to reach me is LinkedIn.
             </h2>
-            <p className="max-w-none mt-4 text-sm leading-7 text-[var(--text-soft)] sm:text-base">
+            <p className="body-copy max-w-none mt-4">
               Medium is there if you want a little more context first.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-5">
@@ -273,7 +285,7 @@ export default function HomePage() {
                 href={siteConfig.social.medium}
                 target="_blank"
                 rel="noreferrer"
-                className="interactive-link text-sm text-[var(--text-soft)] transition duration-300 hover:text-[var(--text-strong)]"
+                className="interactive-link supporting-copy transition duration-300 hover:text-[var(--text-strong)]"
               >
                 Visit Medium
               </Link>
