@@ -27,7 +27,7 @@ export default function HomePage() {
             <div className="max-w-3xl">
               <p className="section-label">Andrea Milan · Head of Product at TheFork</p>
               <h1 className="display-copy mt-6 max-w-3xl text-[2.85rem] leading-[0.92] sm:text-[4.3rem] lg:text-[5.15rem]">
-                I build products — and teams — that get stronger as they scale.
+                I build products and teams that get stronger as they scale.
               </h1>
               <p className="body-copy reading-measure mt-6">
                 {introLead}
