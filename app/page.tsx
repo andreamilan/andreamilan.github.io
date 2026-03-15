@@ -48,7 +48,7 @@ export default function HomePage() {
                   rel="noreferrer"
                   className="interactive-link supporting-copy transition duration-300 hover:text-[var(--text-strong)]"
                 >
-                  Medium
+                  Blog
                 </Link>
               </div>
             </div>
