@@ -20,13 +20,13 @@ export default function HomePage() {
     <SiteFrame>
       <section
         id="intro"
-        className="container-shell pb-20 pt-32 sm:pb-24 sm:pt-36 lg:pb-28 lg:pt-40"
+        className="container-shell pb-20 pt-24 sm:pb-24 sm:pt-28 lg:pb-28 lg:pt-32"
       >
         <div className="grid gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-16">
           <HeroIntro>
-            <div className="max-w-[40rem] pt-1 lg:pt-6">
+            <div className="max-w-[40rem] pt-0 lg:pt-3">
               <p className="section-label">Andrea Milan · Head of Product at TheFork</p>
-              <h1 className="display-copy mt-6 max-w-3xl text-[2.85rem] leading-[0.92] sm:text-[4.3rem] lg:text-[5.15rem]">
+              <h1 className="display-copy mt-5 max-w-3xl text-[2.85rem] leading-[0.92] sm:mt-6 sm:text-[4.3rem] lg:text-[5.15rem]">
                 I build products and teams that get stronger as they scale.
               </h1>
               <p className="body-copy mt-6 max-w-[39rem]">
@@ -103,8 +103,11 @@ export default function HomePage() {
             <Reveal>
               <article className="grid gap-6 rounded-[2rem] border border-[rgba(246,241,232,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.025))] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.12)] sm:p-8 lg:grid-cols-[0.24fr_0.76fr]">
                 <div className="space-y-2">
-                  <p className="meta-copy">{currentRole.period}</p>
-                  <p className="meta-detail">
+                  <p className="meta-copy sm:hidden">
+                    {currentRole.period} · {currentRole.location}
+                  </p>
+                  <p className="meta-copy hidden sm:block">{currentRole.period}</p>
+                  <p className="meta-detail hidden sm:block">
                     {currentRole.location}
                   </p>
                 </div>
@@ -146,10 +149,13 @@ export default function HomePage() {
                       className="grid gap-3 py-5 first:pt-0 last:pb-0 sm:gap-4 lg:grid-cols-[0.2fr_0.3fr_0.5fr]"
                     >
                       <div className="space-y-1.5">
-                        <p className="meta-copy">
+                        <p className="meta-copy sm:hidden">
+                          {entry.period} · {entry.location}
+                        </p>
+                        <p className="meta-copy hidden sm:block">
                           {entry.period}
                         </p>
-                        <p className="meta-detail">
+                        <p className="meta-detail hidden sm:block">
                           {entry.location}
                         </p>
                       </div>
@@ -194,9 +200,13 @@ export default function HomePage() {
                     key={`${item.school}-${item.degree}`}
                     className="grid gap-2 py-3.5 lg:grid-cols-[0.24fr_0.76fr]"
                   >
-                    <p className="meta-copy">
-                      {item.period}
-                    </p>
+                    <div className="space-y-1">
+                      <p className="meta-copy sm:hidden">
+                        {item.period} · {item.location}
+                      </p>
+                      <p className="meta-copy hidden sm:block">{item.period}</p>
+                      <p className="meta-detail hidden sm:block">{item.location}</p>
+                    </div>
                     <div>
                       <h3 className="text-[1rem] font-semibold tracking-[-0.02em] text-[var(--text-strong)]">
                         {item.school}

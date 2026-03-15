@@ -12,6 +12,7 @@ export type EducationItem = {
   school: string;
   degree: string;
   period: string;
+  location: string;
 };
 
 export const introLead =
@@ -120,16 +121,19 @@ export const education: EducationItem[] = [
   {
     school: "University of Milano-Bicocca",
     degree: "MSc in Business Administration and Management",
-    period: "2013"
+    period: "2013",
+    location: "Milan, Italy"
   },
   {
     school: "Tallinn University of Technology",
     degree: "Erasmus exchange in International Business",
-    period: "2012"
+    period: "2012",
+    location: "Tallinn, Estonia"
   },
   {
     school: "University of Milano-Bicocca",
     degree: "BSc in Business and Managerial Economics",
-    period: "2011"
+    period: "2011",
+    location: "Milan, Italy"
   }
 ];

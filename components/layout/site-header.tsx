@@ -66,12 +66,12 @@ export function SiteHeader() {
   return (
     <>
       <header className="pointer-events-none absolute inset-x-0 top-0 z-40">
-        <div className="mx-auto flex max-w-6xl items-start justify-between gap-3 px-5 pb-4 pt-6 sm:items-center sm:gap-4 sm:px-8 sm:pt-8 lg:px-10">
+        <div className="mx-auto flex max-w-6xl items-start justify-between gap-3 px-5 pb-3 pt-5 sm:items-center sm:gap-4 sm:px-8 sm:pb-4 sm:pt-8 lg:px-10">
           <Link href="#intro" className="pointer-events-auto inline-flex flex-col">
             <span className="text-[0.8rem] font-medium uppercase tracking-[0.18em] text-[var(--text-strong)]">
               Andrea Milan
             </span>
-            <span className="meta-copy mt-1 hidden sm:inline">
+            <span className="meta-copy mt-1">
               Product Leader
             </span>
           </Link>

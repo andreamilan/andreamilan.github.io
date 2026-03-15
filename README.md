@@ -1,6 +1,6 @@
 # Andrea Milan Personal Website
 
-A dark, single-page editorial personal website for Andrea Milan, built as a static Next.js site for GitHub Pages. The site is designed to feel personal, premium, calm, and modern, with concise content, a featured current role, and restrained motion polish.
+Andrea Milan's website is a live, dark, single-page editorial personal website built for GitHub Pages. It is designed to present Andrea as a product leader through a calm, premium, design-led experience rather than a SaaS portfolio or resume-style site.
 
 ## Stack
 - Next.js App Router
@@ -17,32 +17,43 @@ A dark, single-page editorial personal website for Andrea Milan, built as a stat
 - `npm run build`
 - Static output is generated in `out/`
 
-## Deployment Target
+## Deployment
 - Production URL: `https://andreamilan.github.io/`
 - Hosting: GitHub Pages
+- Deployment method: GitHub Actions
 - Rendering model: fully static export
 
-## Current Structure
-- `app/` single-page route, layout, and global styles
-- `components/` layout and lightweight UI primitives
-- `content/` curated profile content and site metadata
-- `public/` static assets including the hero portrait
-- `.github/workflows/` deployment automation
+## Current Site Structure
+1. Hero
+2. Overview
+3. Experience
+4. Education
+5. Principles
+6. Get in touch
+7. Footer
 
 ## Current Product Shape
-- Single-page anchored navigation
-- Hero, Overview, Experience, Education, Principles, Get in touch, Footer
-- Dark-mode default visual system
-- Current role featured as the main career entry
-- Medium kept as a subtle secondary link only
-- No standalone Writing, About, or Contact pages
-- First-person copy throughout
-- Premium but restrained motion and interaction design
+- Single-page, anchored editorial layout
+- Dark mode by default
+- Portrait-led hero with a rotating multilingual greeting
+- One featured current role and compact previous roles
+- Education separated from Experience
+- LinkedIn as the primary CTA
+- Medium as a secondary link only
+- No standalone About, Writing, or Contact pages
+- No email and no contact form
+
+## Current Code Structure
+- `app/` single-page route, layout, and global styles
+- `components/layout/` shell, header, and footer
+- `components/ui/` motion and hero helpers
+- `content/` curated profile content and site metadata
+- `public/images/` active portrait assets
+- `.github/workflows/` GitHub Pages deployment automation
 
 ## Non-Goals
 - Multi-page portfolio structure
 - SaaS-style landing page patterns
-- Article cards or writing archive UI
-- Contact forms
+- Article-card writing archive UI
 - Backend features
 - Server-dependent rendering

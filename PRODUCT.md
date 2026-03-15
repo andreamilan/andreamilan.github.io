@@ -1,52 +1,59 @@
 # Product Summary
 
-Andrea Milan's website is a dark, single-page editorial personal website. It should feel premium, personal, calm, and modern, with a strong visual identity and low reading effort.
+Andrea Milan's website is a dark, single-page editorial personal website. It should feel premium, calm, modern, and credible for future companies evaluating Andrea for product leadership roles.
 
 ## Audience
-- Hiring leaders and recruiters assessing product leadership
-- Founders, operators, and peers evaluating taste and clarity
+- Hiring leaders and recruiters assessing product leadership potential
+- Founders, executives, and operators evaluating judgment, clarity, and taste
 - Professional contacts looking for a simple public way to connect
 
-## User Goals
-- Understand who Andrea is and what kind of product leader he is
-- Quickly read the most relevant parts of his career
-- See the current role clearly positioned as the main professional anchor
-- Reach Andrea through LinkedIn without friction
+## Product Goals
+- Position Andrea clearly as a product leader
+- Make the current role at TheFork the main professional anchor
+- Show a coherent career path without turning the site into a resume dump
+- Create confidence through design quality, hierarchy, and restraint
+- Provide a frictionless path to LinkedIn, with Medium as a secondary source of perspective
 
-## Product Principles
+## Target Impression
 - Personal, not corporate
 - Editorial, not SaaS-like
+- Premium, not flashy
+- Credible, not generic
 - Concise, not exhaustive
-- Motion-aware, not animation-heavy
-- Readable on mobile first
 
 ## Information Architecture
 1. Hero
-2. Intro
+2. Overview
 3. Experience
 4. Education
-5. How I think
-6. Connect
+5. Principles
+6. Get in touch
 7. Footer
 
+## Section Roles
+- `Hero`: establish Andrea's positioning, current context, and portrait-led first impression
+- `Overview`: bridge the hero and the career story with concise first-person framing
+- `Experience`: feature the current role and keep previous roles compact and scannable
+- `Education`: support the narrative without competing with Experience
+- `Principles`: show leadership judgment and product philosophy in concise terms
+- `Get in touch`: direct visitors to LinkedIn and optionally to Medium
+
+## CTA Strategy
+- LinkedIn is the main public CTA
+- Medium is a secondary supporting link only
+- No email and no contact form
+
 ## Content Rules
-- All site copy is in first person.
-- The hero includes a portrait on the right.
-- LinkedIn is the main public CTA.
-- Medium appears only as a subtle secondary link.
-- The current role, Head of Product, is the only featured career entry.
-- Previous roles are compact and concise.
-- Education is its own section, separate from Experience.
-- No email and no contact form.
+- All visible site copy is in first person
+- The hero includes a portrait on the right
+- The current role is the only featured experience entry
+- Previous roles stay compact and action-led
+- Education remains its own section
+- Principles should feel useful to companies evaluating product leadership in 2026
 
 ## Constraints
 - Fully static
 - GitHub Pages compatible
+- GitHub Actions deployment
 - No backend
-- No standalone Writing, About, or Contact pages
-- No article-card treatment for old writing
-
-## Future Directions
-- Final section-composition refinement
-- Motion polish and mobile tuning
-- Optional sanitized CV download if a safe version exists
+- No standalone About, Writing, or Contact pages

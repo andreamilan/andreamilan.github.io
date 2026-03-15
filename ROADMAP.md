@@ -1,15 +1,15 @@
-# Short-Term
-- Refine section composition and spacing
-- Improve Experience and Education consistency
-- Further polish motion and hover interactions
-- Finalize mobile quality and text rhythm
-- Prepare deployment and publishing assets
+# Current Status
+- No required short-term work. The site is live, stable, and in a strong pause-ready state.
 
-## Mid-Term
-- Add favicon and social preview assets
-- Improve metadata and share presentation
-- Consider a sanitized CV download if a safe copy exists
+## If Work Resumes
+- Small content iteration if Andrea's positioning or current role needs updating
+- Additional polish to motion, spacing, or typography only if it produces a clear improvement
+- Optional visual asset refinement such as favicon or social preview improvements
+- Optional metadata/share improvements if needed for external presentation
 
-## Long-Term
-- Explore small editorial extensions only if they preserve the simplicity of the one-page architecture
-- Consider selected case studies only if they do not break the current calm structure
+## Keep Out of Scope Unless Direction Changes
+- Multi-page expansion
+- Writing archive UI
+- Resume-dump treatment
+- Backend or server features
+- Heavy structural redesign
