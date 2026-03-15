@@ -27,7 +27,7 @@ export default function HomePage() {
             <div className="max-w-3xl">
               <p className="section-label">Andrea Milan · Head of Product at TheFork</p>
               <h1 className="display-copy mt-6 max-w-3xl text-[2.85rem] leading-[0.92] sm:text-[4.3rem] lg:text-[5.15rem]">
-                I believe in products that get clearer as they grow.
+                I build products — and teams — that get stronger as they scale.
               </h1>
               <p className="body-copy reading-measure mt-6">
                 {introLead}
@@ -48,7 +48,7 @@ export default function HomePage() {
                   rel="noreferrer"
                   className="interactive-link supporting-copy transition duration-300 hover:text-[var(--text-strong)]"
                 >
-                  Blog
+                  Visit Medium
                 </Link>
               </div>
             </div>
@@ -67,7 +67,7 @@ export default function HomePage() {
         <div className="max-w-5xl">
           <Reveal>
             <h2 className="section-title">
-              Intro
+              About Me
             </h2>
           </Reveal>
           <Reveal delay={0.03}>
@@ -136,11 +136,8 @@ export default function HomePage() {
 
             <Reveal delay={0.12}>
               <div className="rounded-[1.75rem] border border-[rgba(246,241,232,0.06)] bg-[rgba(255,255,255,0.02)] px-5 py-4 sm:px-7 sm:py-5">
-                <div className="space-y-1 pb-5">
+                <div className="pb-5">
                   <p className="section-label">Previous roles</p>
-                  <p className="meta-detail">
-                    Compact by design, but complete.
-                  </p>
                 </div>
                 <div className="divide-y divide-[rgba(246,241,232,0.06)]">
                   {supportingRoles.map((entry) => (
@@ -223,7 +220,7 @@ export default function HomePage() {
         <div className="max-w-5xl">
           <Reveal>
             <h2 className="section-title">
-              How I think
+              Principles
             </h2>
           </Reveal>
           <Reveal delay={0.03}>
@@ -259,7 +256,7 @@ export default function HomePage() {
         <Reveal>
           <div className="max-w-5xl">
             <h2 className="section-title">
-              Connect
+              Get in touch
             </h2>
             <div className="section-rule" />
           </div>
@@ -270,7 +267,7 @@ export default function HomePage() {
               The best place to reach me is LinkedIn.
             </h2>
             <p className="body-copy max-w-none mt-4">
-              Medium is there if you want a little more context first.
+              You can find more of my perspective on Medium.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-5">
               <Link

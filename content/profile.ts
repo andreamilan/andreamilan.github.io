@@ -15,25 +15,25 @@ export type EducationItem = {
 };
 
 export const introLead =
-  "I lead product at TheFork, after senior roles at Klarna, Subito and Wise. Over the past decade, I've worked across consumer and marketplace products in Europe and the US, with a focus on product quality, team clarity, and execution.";
+  "I lead product at TheFork, after senior roles at Klarna, Subito, and Wise. Over the past decade, I’ve worked across consumer and marketplace products in Europe and the US, building product organisations that stay clear, focused, and effective as they grow.";
 
 export const professionalIntroduction = [
-  "I care about building products that feel clear to use and clear to work on. As my scope has grown, that has stayed constant: better judgment, better prioritisation, and teams that know what matters.",
-  "I've worked across Italy, Switzerland, and Estonia, and I've led products serving multiple markets at once."
+  "I care about building products that stay clear as they grow — for customers, for teams, and for the business behind them. As my scope has expanded, I’ve kept coming back to the same things: sharp judgment, clear priorities, and teams that know where to focus.",
+  "I’ve worked across Italy, Switzerland, and Estonia, and I’ve led products serving multiple markets at once, often in environments where scale, complexity, and coordination all mattered at the same time."
 ] as const;
 
 export const principles = [
   {
-    title: "I use clarity to raise the bar",
-    body: "I want priorities to be legible, tradeoffs to be explicit, and teams to know what good looks like."
+    title: "Clarity is a leadership tool",
+    body: "I want priorities to be legible, tradeoffs to be explicit, and teams to know what matters most."
   },
   {
-    title: "I start with the core experience",
-    body: "When the product gets clearer, growth, trust, and retention usually follow."
+    title: "Product quality starts at the core",
+    body: "The fastest way to grow a product is often to make the core experience simpler, stronger, and easier to trust."
   },
   {
-    title: "I want discovery to change decisions",
-    body: "Research and experiments matter when they sharpen judgment."
+    title: "Discovery should sharpen judgment",
+    body: "Research and experimentation matter when they improve decisions, not when they become a substitute for them."
   }
 ] as const;
 
@@ -44,10 +44,10 @@ export const timeline: TimelineEntry[] = [
     location: "Milan, Italy",
     period: "2023 - Present",
     summary:
-      "I lead the consumer product organisation across discovery, search, booking, loyalty, and engagement for a business operating in 12 countries.",
+      "I lead the consumer product organisation at TheFork across discovery, search, booking, loyalty, and engagement, for a business operating in 12 countries.",
     details: [
-      "I define long-term consumer direction with design, engineering, data, marketing, and executive partners.",
-      "I coach Product Managers and Group Product Managers while raising product quality, prioritisation, and execution discipline."
+      "I shape long-term consumer direction and align cross-functional leaders around the most important product bets.",
+      "I coach Product Managers and Group Product Managers while raising the bar on product quality, prioritisation, and execution."
     ],
     emphasis: "major"
   },
@@ -66,7 +66,7 @@ export const timeline: TimelineEntry[] = [
     location: "Milan, Italy",
     period: "2020 - 2022",
     summary:
-      "Led a product tribe focused on growth, safety, and monetisation in one of Italy's most established marketplaces.",
+      "Led a product tribe focused on growth, safety, and monetisation in one of Italy's leading consumer marketplaces.",
     emphasis: "supporting"
   },
   {
@@ -75,7 +75,7 @@ export const timeline: TimelineEntry[] = [
     location: "Milan, Italy",
     period: "2019 - 2020",
     summary:
-      "Led acquisition, retention, and referral scopes, with a strong focus on experimentation.",
+      "Led acquisition, retention, and referral, with a strong focus on experimentation.",
     emphasis: "supporting"
   },
   {
@@ -84,7 +84,7 @@ export const timeline: TimelineEntry[] = [
     location: "Stabio, Switzerland",
     period: "2017 - 2019",
     summary:
-      "Led discovery and delivery across web and mobile for a high-volume job marketplace.",
+      "Led product discovery and delivery across web and mobile for a high-volume job marketplace.",
     emphasis: "supporting"
   },
   {
@@ -93,7 +93,7 @@ export const timeline: TimelineEntry[] = [
     location: "Tallinn, Estonia",
     period: "2015 - 2017",
     summary:
-      "Worked on localisation, operational systems, and market-specific product adaptations across European markets.",
+      "Worked on localisation, operational systems, and market-specific product adaptations to support expansion across European markets.",
     emphasis: "supporting"
   },
   {
@@ -102,7 +102,7 @@ export const timeline: TimelineEntry[] = [
     location: "Tallinn, Estonia",
     period: "2014 - 2015",
     summary:
-      "Managed SEO and SEM activity for e-commerce clients.",
+      "Managed SEO and SEM for e-commerce clients.",
     emphasis: "supporting"
   },
   {
@@ -118,18 +118,18 @@ export const timeline: TimelineEntry[] = [
 
 export const education: EducationItem[] = [
   {
-    school: "Universita degli Studi di Milano-Bicocca",
-    degree: "Master's degree in Business Administration and Management",
-    period: "2011 - 2013"
+    school: "University of Milano-Bicocca",
+    degree: "MSc in Business Administration and Management",
+    period: "2013"
   },
   {
-    school: "Tallinna Tehnikaulikool",
-    degree: "Erasmus Programme in International Business",
-    period: "2012 - 2013"
+    school: "Tallinn University of Technology",
+    degree: "Erasmus exchange in International Business",
+    period: "2012"
   },
   {
-    school: "Universita degli Studi di Milano-Bicocca",
-    degree: "Bachelor's degree in Business and Managerial Economics",
-    period: "2007 - 2011"
+    school: "University of Milano-Bicocca",
+    degree: "BSc in Business and Managerial Economics",
+    period: "2011"
   }
 ];
