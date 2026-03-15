@@ -20,25 +20,25 @@ export default function HomePage() {
     <SiteFrame>
       <section
         id="intro"
-        className="container-shell pb-16 pt-28 sm:pb-20 sm:pt-32 lg:pb-24 lg:pt-36"
+        className="container-shell pb-20 pt-40 sm:pb-24 sm:pt-36 lg:pb-28 lg:pt-40"
       >
-        <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14">
+        <div className="grid gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-16">
           <HeroIntro>
-            <div className="max-w-3xl">
+            <div className="max-w-[40rem] pt-4 lg:pt-6">
               <p className="section-label">Andrea Milan · Head of Product at TheFork</p>
               <h1 className="display-copy mt-6 max-w-3xl text-[2.85rem] leading-[0.92] sm:text-[4.3rem] lg:text-[5.15rem]">
                 I build products and teams that get stronger as they scale.
               </h1>
-              <p className="body-copy reading-measure mt-6">
+              <p className="body-copy mt-6 max-w-[39rem]">
                 {introLead}
               </p>
 
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="mt-9 flex flex-wrap items-center gap-5">
                 <Link
                   href={siteConfig.social.linkedin}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex rounded-full border border-[rgba(246,241,232,0.14)] bg-[rgba(246,241,232,0.08)] px-5 py-3 text-sm font-semibold text-[var(--text-strong)] shadow-[0_16px_40px_rgba(0,0,0,0.14)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(246,241,232,0.24)] hover:bg-[rgba(246,241,232,0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus)]"
+                  className="cta-primary shadow-[0_16px_40px_rgba(0,0,0,0.14)]"
                 >
                   Connect on LinkedIn
                 </Link>
@@ -46,7 +46,7 @@ export default function HomePage() {
                   href={siteConfig.social.medium}
                   target="_blank"
                   rel="noreferrer"
-                  className="interactive-link supporting-copy transition duration-300 hover:text-[var(--text-strong)]"
+                  className="interactive-link cta-secondary"
                 >
                   Visit Medium
                 </Link>
@@ -55,8 +55,8 @@ export default function HomePage() {
           </HeroIntro>
 
           <Reveal delay={0.08}>
-            <div className="relative lg:pl-8">
-              <div className="pointer-events-none absolute inset-x-[14%] top-[8%] h-[70%] rounded-full bg-[rgba(118,82,255,0.1)] blur-3xl" />
+            <div className="relative mx-auto w-full max-w-[28rem] lg:max-w-[30rem] lg:pl-6">
+              <div className="pointer-events-none absolute inset-x-[16%] top-[10%] h-[68%] rounded-full bg-[rgba(118,82,255,0.1)] blur-3xl" />
               <HeroPortrait />
             </div>
           </Reveal>
@@ -67,7 +67,7 @@ export default function HomePage() {
         <div className="max-w-5xl">
           <Reveal>
             <h2 className="section-title">
-              About Me
+              Overview
             </h2>
           </Reveal>
           <Reveal delay={0.03}>
@@ -135,17 +135,17 @@ export default function HomePage() {
             </Reveal>
 
             <Reveal delay={0.12}>
-              <div className="rounded-[1.75rem] border border-[rgba(246,241,232,0.06)] bg-[rgba(255,255,255,0.02)] px-5 py-4 sm:px-7 sm:py-5">
-                <div className="pb-5">
+              <div className="soft-card px-5 py-5 sm:px-7 sm:py-6">
+                <div className="pb-6">
                   <p className="section-label">Previous roles</p>
                 </div>
-                <div className="divide-y divide-[rgba(246,241,232,0.06)]">
+                <div className="divide-y divide-[rgba(246,241,232,0.05)]">
                   {supportingRoles.map((entry) => (
                     <article
                       key={`${entry.company}-${entry.title}`}
-                      className="grid gap-2 py-4 sm:gap-3 lg:grid-cols-[0.22fr_0.28fr_0.5fr]"
+                      className="grid gap-3 py-5 first:pt-0 last:pb-0 sm:gap-4 lg:grid-cols-[0.2fr_0.3fr_0.5fr]"
                     >
-                      <div className="space-y-1">
+                      <div className="space-y-1.5">
                         <p className="meta-copy">
                           {entry.period}
                         </p>
@@ -153,15 +153,15 @@ export default function HomePage() {
                           {entry.location}
                         </p>
                       </div>
-                      <div>
+                      <div className="space-y-1.5">
                         <h3 className="text-[1rem] font-semibold tracking-[-0.02em] text-[var(--text-strong)]">
                           {entry.title}
                         </h3>
-                        <p className="accent-copy mt-1">
+                        <p className="accent-copy">
                           {entry.company}
                         </p>
                       </div>
-                      <p className="supporting-copy reading-measure">
+                      <p className="supporting-copy max-w-none lg:max-w-[27rem]">
                         {entry.summary}
                       </p>
                     </article>
@@ -187,12 +187,12 @@ export default function HomePage() {
             <div className="section-rule" />
           </Reveal>
           <Reveal delay={0.06}>
-            <div className="mt-7 rounded-[1.75rem] border border-[rgba(246,241,232,0.06)] bg-[rgba(255,255,255,0.02)] px-5 py-3 sm:px-7 sm:py-4">
-              <div className="divide-y divide-[rgba(246,241,232,0.06)]">
+            <div className="mt-6 rounded-[1.5rem] border border-[rgba(246,241,232,0.05)] bg-[rgba(255,255,255,0.015)] px-5 py-2 sm:px-7 sm:py-3">
+              <div className="divide-y divide-[rgba(246,241,232,0.045)]">
                 {education.map((item) => (
                   <article
                     key={`${item.school}-${item.degree}`}
-                    className="grid gap-2 py-4 lg:grid-cols-[0.24fr_0.76fr]"
+                    className="grid gap-2 py-3.5 lg:grid-cols-[0.24fr_0.76fr]"
                   >
                     <p className="meta-copy">
                       {item.period}
@@ -227,18 +227,18 @@ export default function HomePage() {
             <div className="section-rule" />
           </Reveal>
 
-          <div className="mt-10 space-y-10">
+          <div className="mt-10 space-y-8">
             {principles.map((item, index) => (
               <Reveal key={item.title} delay={index * 0.07}>
-                <article className="grid gap-3 border-t border-[rgba(246,241,232,0.06)] pt-6 sm:grid-cols-[3.5rem_1fr] sm:gap-5">
-                  <p className="display-copy text-[1.8rem] leading-none text-[rgba(246,241,232,0.34)] sm:text-[2.1rem]">
+                <article className="soft-card grid gap-3 px-5 py-6 sm:grid-cols-[3rem_1fr] sm:gap-5 sm:px-6">
+                  <p className="display-copy pt-0.5 text-[1.35rem] leading-none text-[rgba(246,241,232,0.24)] sm:text-[1.55rem]">
                     0{index + 1}
                   </p>
                   <div>
-                    <h3 className="display-copy text-[1.75rem] leading-[1] sm:text-[2.2rem]">
+                    <h3 className="display-copy text-[1.55rem] leading-[1.02] sm:text-[1.95rem]">
                       {item.title}
                     </h3>
-                    <p className="body-copy max-w-none mt-3">
+                    <p className="supporting-copy mt-3 max-w-[46rem] leading-8 sm:text-[1rem]">
                       {item.body}
                     </p>
                   </div>
@@ -263,18 +263,18 @@ export default function HomePage() {
         </Reveal>
         <Reveal delay={0.05}>
           <div className="max-w-5xl pt-8">
-            <h2 className="display-copy max-w-none text-[2.25rem] leading-[0.96] sm:text-[3.4rem]">
+            <h2 className="display-copy max-w-[48rem] text-[2.25rem] leading-[0.96] sm:text-[3.2rem]">
               The best place to reach me is LinkedIn.
             </h2>
-            <p className="body-copy max-w-none mt-4">
+            <p className="body-copy mt-4 max-w-[42rem]">
               You can find more of my perspective on Medium.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-5">
+            <div className="mt-9 flex flex-wrap items-center gap-5">
               <Link
                 href={siteConfig.social.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex rounded-full border border-[rgba(246,241,232,0.14)] bg-[rgba(246,241,232,0.08)] px-5 py-3 text-sm font-semibold text-[var(--text-strong)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(246,241,232,0.24)] hover:bg-[rgba(246,241,232,0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus)]"
+                className="cta-primary"
               >
                 Connect on LinkedIn
               </Link>
@@ -282,7 +282,7 @@ export default function HomePage() {
                 href={siteConfig.social.medium}
                 target="_blank"
                 rel="noreferrer"
-                className="interactive-link supporting-copy transition duration-300 hover:text-[var(--text-strong)]"
+                className="interactive-link cta-secondary"
               >
                 Visit Medium
               </Link>
