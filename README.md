@@ -25,13 +25,13 @@ A dark, single-page editorial personal website for Andrea Milan, built as a stat
 ## Current Structure
 - `app/` single-page route, layout, and global styles
 - `components/` layout and lightweight UI primitives
-- `content/` curated profile content and lightweight secondary-link data
+- `content/` curated profile content and site metadata
 - `public/` static assets including the hero portrait
 - `.github/workflows/` deployment automation
 
 ## Current Product Shape
 - Single-page anchored navigation
-- Hero, Intro, Experience, Education, How I think, Connect, Footer
+- Hero, Overview, Experience, Education, Principles, Get in touch, Footer
 - Dark-mode default visual system
 - Current role featured as the main career entry
 - Medium kept as a subtle secondary link only

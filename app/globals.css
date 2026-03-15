@@ -80,10 +80,6 @@ a {
   @apply mx-auto max-w-6xl px-5 sm:px-8 lg:px-10;
 }
 
-.section-space {
-  @apply py-20 sm:py-24 lg:py-32;
-}
-
 .section-label {
   @apply text-[0.72rem] font-medium uppercase tracking-[0.18em] text-[var(--text-faint)];
 }
@@ -98,10 +94,6 @@ a {
 
 .body-copy {
   @apply text-[1rem] leading-8 text-[var(--text-soft)] sm:text-[1.05rem] sm:leading-8;
-}
-
-.body-copy-strong {
-  @apply text-[1rem] leading-8 text-[var(--text-strong)] sm:text-[1.05rem] sm:leading-8;
 }
 
 .supporting-copy {
@@ -134,10 +126,6 @@ a {
 
 .reading-measure {
   max-width: 42rem;
-}
-
-.reading-measure-wide {
-  max-width: 50rem;
 }
 
 .ambient-orb {

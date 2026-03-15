@@ -20,11 +20,11 @@ export default function HomePage() {
     <SiteFrame>
       <section
         id="intro"
-        className="container-shell pb-20 pt-40 sm:pb-24 sm:pt-36 lg:pb-28 lg:pt-40"
+        className="container-shell pb-20 pt-32 sm:pb-24 sm:pt-36 lg:pb-28 lg:pt-40"
       >
         <div className="grid gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-16">
           <HeroIntro>
-            <div className="max-w-[40rem] pt-4 lg:pt-6">
+            <div className="max-w-[40rem] pt-1 lg:pt-6">
               <p className="section-label">Andrea Milan · Head of Product at TheFork</p>
               <h1 className="display-copy mt-6 max-w-3xl text-[2.85rem] leading-[0.92] sm:text-[4.3rem] lg:text-[5.15rem]">
                 I build products and teams that get stronger as they scale.
