@@ -11,7 +11,8 @@ const greetings = [
   "Hola!",
   "Hallo!",
   "Hej!",
-  "Tere!"
+  "Tere!",
+  "Merhaba!"
 ] as const;
 
 export function HeroPortrait() {

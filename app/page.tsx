@@ -273,7 +273,7 @@ export default function HomePage() {
         </Reveal>
         <Reveal delay={0.05}>
           <div className="max-w-5xl pt-8">
-            <h2 className="display-copy max-w-[48rem] text-[2.25rem] leading-[0.96] sm:text-[3.2rem]">
+            <h2 className="display-copy max-w-[48rem] text-[2.25rem] leading-[0.96] sm:max-w-[56rem] sm:text-[3.2rem] lg:whitespace-nowrap">
               The best place to reach me is LinkedIn.
             </h2>
             <p className="body-copy mt-4 max-w-[42rem]">
