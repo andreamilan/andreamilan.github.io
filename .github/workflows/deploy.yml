@@ -43,7 +43,7 @@ jobs:
         with:
           path: ./out
 
-deploy:
+  deploy:
     needs: build
     runs-on: ubuntu-latest
     permissions:
