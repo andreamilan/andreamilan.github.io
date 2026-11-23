@@ -1,0 +1,21 @@
+.next
+node_modules
+out
+dist
+npm-debug.log*
+*.tsbuildinfo
+.DS_Store
+
+# Local secrets and credentials
+.env*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local editor settings
+.idea/
+.vscode/
+*.swp
+*.swo
