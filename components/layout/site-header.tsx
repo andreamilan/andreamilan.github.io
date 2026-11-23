@@ -1,170 +1,76 @@
 "use client";
 
 import Link from "next/link";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { siteConfig } from "@/content/site";
 
-const sectionIds = siteConfig.navigation.map((item) => item.href.replace("#", ""));
-
 export function SiteHeader() {
-  const [activeSection, setActiveSection] = useState("intro");
-  const [showProgressNav, setShowProgressNav] = useState(false);
+  const [activeSection, setActiveSection] = useState("overview");
   const [menuOpen, setMenuOpen] = useState(false);
-  const reduceMotion = useReducedMotion();
-  const activeItem = useMemo(
-    () =>
-      siteConfig.navigation.find(
-        (item) => item.href.replace("#", "") === activeSection
-      ) ?? siteConfig.navigation[0],
-    [activeSection]
-  );
+  const headerRef = useRef<HTMLElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    const sections = sectionIds
-      .map((id) => document.getElementById(id))
-      .filter(Boolean) as HTMLElement[];
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-        if (visible?.target?.id) {
-          setActiveSection(visible.target.id);
-        }
-      },
-      {
-        rootMargin: "-28% 0px -48% 0px",
-        threshold: [0.2, 0.45, 0.7]
-      }
-    );
-
-    sections.forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
+    const atBottom = () => window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8;
     const onScroll = () => {
-      setShowProgressNav(window.scrollY > 180);
+      if (atBottom()) setActiveSection("connect");
     };
-
-    onScroll();
+    const observer = new IntersectionObserver((entries) => {
+      if (atBottom()) {
+        setActiveSection("connect");
+        return;
+      }
+      for (const entry of entries) {
+        if (entry.isIntersecting) setActiveSection(entry.target.id === "intro" ? "overview" : entry.target.id);
+      }
+    }, { rootMargin: "-10% 0px -70% 0px", threshold: 0 });
+    for (const id of ["intro", ...siteConfig.navigation.map(item => item.href.slice(1))]) {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    }
     window.addEventListener("scroll", onScroll, { passive: true });
-
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   useEffect(() => {
-    if (!showProgressNav) {
-      setMenuOpen(false);
-    }
-  }, [showProgressNav]);
+    if (!menuOpen) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+    const onPointerDown = (event: PointerEvent) => {
+      if (event.target instanceof Node && !headerRef.current?.contains(event.target)) setMenuOpen(false);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("pointerdown", onPointerDown);
+    };
+  }, [menuOpen]);
 
   return (
-    <>
-      <header className="pointer-events-none absolute inset-x-0 top-0 z-40">
-        <div className="mx-auto flex max-w-6xl items-start justify-between gap-3 px-5 pb-3 pt-5 sm:items-center sm:gap-4 sm:px-8 sm:pb-4 sm:pt-8 lg:px-10">
-          <Link href="#intro" className="pointer-events-auto inline-flex flex-col">
-            <span className="text-[0.8rem] font-medium uppercase tracking-[0.18em] text-[var(--text-strong)]">
-              Andrea Milan
-            </span>
-            <span className="meta-copy mt-1">
-              Product Leader
-            </span>
-          </Link>
-
-          <div className="pointer-events-auto flex shrink-0 items-center gap-3">
-            <span className="meta-copy hidden sm:inline">
-              Milan, Italy
-            </span>
-            <Link
-              href={siteConfig.social.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center rounded-full border border-[rgba(246,241,232,0.1)] bg-[rgba(246,241,232,0.05)] px-3.5 py-2 text-[0.73rem] font-medium uppercase tracking-[0.14em] text-[var(--text-strong)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(246,241,232,0.18)] hover:bg-[rgba(246,241,232,0.1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus)] sm:px-4 sm:text-[0.76rem]"
-            >
-              LinkedIn
-            </Link>
-          </div>
-        </div>
-      </header>
-
-      <AnimatePresence>
-        {showProgressNav ? (
-          <motion.div
-            initial={reduceMotion ? false : { opacity: 0, y: -12 }}
-            animate={reduceMotion ? {} : { opacity: 1, y: 0 }}
-            exit={reduceMotion ? {} : { opacity: 0, y: -12 }}
-            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-x-0 top-4 z-50 px-4 sm:top-5"
-          >
-            <div className="mx-auto max-w-fit">
-              <div className="rounded-full border border-[rgba(246,241,232,0.12)] bg-[rgba(17,15,25,0.72)] px-3 py-2 shadow-[0_18px_60px_rgba(0,0,0,0.24)] backdrop-blur-xl">
-                <div className="flex items-center gap-3">
-                  <Link
-                    href={activeItem.href}
-                    className="rounded-full px-3 py-2 text-[0.78rem] font-medium text-[var(--text-strong)] transition duration-300 hover:bg-[rgba(255,255,255,0.05)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus)]"
-                  >
-                    {activeItem.label}
-                  </Link>
-                  <span className="h-1 w-1 rounded-full bg-[rgba(246,241,232,0.24)]" />
-                  <button
-                    type="button"
-                    onClick={() => setMenuOpen((open) => !open)}
-                    className="rounded-full px-3 py-2 text-[0.78rem] text-[var(--text-soft)] transition duration-300 hover:bg-[rgba(255,255,255,0.05)] hover:text-[var(--text-strong)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus)]"
-                    aria-expanded={menuOpen}
-                    aria-controls="section-menu"
-                  >
-                    Browse
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <AnimatePresence>
-              {menuOpen ? (
-                <motion.nav
-                  id="section-menu"
-                  aria-label="Section navigation"
-                  initial={reduceMotion ? false : { opacity: 0, y: -10, scale: 0.98 }}
-                  animate={reduceMotion ? {} : { opacity: 1, y: 0, scale: 1 }}
-                  exit={reduceMotion ? {} : { opacity: 0, y: -10, scale: 0.98 }}
-                  transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                  className="mx-auto mt-3 max-w-md rounded-[1.75rem] border border-[rgba(246,241,232,0.1)] bg-[rgba(17,15,25,0.82)] p-3 shadow-[0_20px_70px_rgba(0,0,0,0.28)] backdrop-blur-xl"
-                >
-                  <div className="grid gap-1 sm:grid-cols-2">
-                    {siteConfig.navigation.map((item) => {
-                      const isActive = activeSection === item.href.replace("#", "");
-
-                      return (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          onClick={() => setMenuOpen(false)}
-                          className={`rounded-[1.1rem] px-4 py-3 text-[0.95rem] transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus)] ${
-                            isActive
-                              ? "bg-[rgba(255,255,255,0.06)] text-[var(--text-strong)]"
-                              : "text-[var(--text-soft)] hover:bg-[rgba(255,255,255,0.04)] hover:text-[var(--text-strong)]"
-                          }`}
-                        >
-                          {item.label}
-                        </Link>
-                      );
-                    })}
-                  </div>
-                </motion.nav>
-              ) : null}
-            </AnimatePresence>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
-
-      <div className="sr-only" aria-live="polite">
-        Current section: {activeItem.label}
+    <header className="site-header" ref={headerRef}>
+      <div className="container-shell header-inner">
+        <Link href="#intro" className="site-name" onClick={() => setMenuOpen(false)}>Andrea Milan</Link>
+        <button ref={menuButtonRef} className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="section-navigation" onClick={() => setMenuOpen(open => !open)}>
+          {menuOpen ? "Close" : "Browse"}
+        </button>
+        <nav id="section-navigation" aria-label="Section navigation" className={`section-navigation${menuOpen ? " is-open" : ""}`}>
+          {siteConfig.navigation.map(item => (
+            <Link key={item.href} href={item.href} className={activeSection === item.href.slice(1) ? "is-active" : undefined} aria-current={activeSection === item.href.slice(1) ? "location" : undefined} onClick={() => {
+              setMenuOpen(false);
+              setActiveSection(item.href.slice(1));
+              if (menuOpen) menuButtonRef.current?.focus();
+            }}>{item.label}</Link>
+          ))}
+        </nav>
       </div>
-    </>
+    </header>
   );
 }

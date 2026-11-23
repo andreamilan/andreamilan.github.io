@@ -13,4 +13,4 @@ A single-page personal website presenting my product experience, education, and 
 LinkedIn is the primary contact link. Medium is a secondary link. The site has no contact form or published email address.
 
 ## Design and Delivery
-Dark editorial styling, a portrait-led hero, consistent section alignment, responsive typography, and restrained motion with reduced-motion support. The site is a static export hosted on GitHub Pages.
+Light editorial styling with a softly shifting background, a portrait-led hero, consistent section alignment, responsive typography, and restrained motion with reduced-motion support. The site is a static export hosted on GitHub Pages.

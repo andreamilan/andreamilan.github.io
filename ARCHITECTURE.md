@@ -12,16 +12,19 @@ The site uses a single-page Next.js App Router setup with static export enabled.
 ## Page Composition
 - Hero with portrait, primary CTA, and rotating multilingual greeting
 - Overview as a short positioning bridge
-- Experience with one featured current role and compact previous roles
-- Education as a lighter secondary section
+- Experience as a staggered chronological timeline; native disclosures keep the current role featured and earlier descriptions available on demand
+- Education as a separate, lighter staggered timeline
 - Principles as a concise authored positioning section
 - Get in touch with LinkedIn as the main CTA and Medium as a secondary link
 
 ## Layout System
 - The hero uses a distinct composition with text left and portrait right
 - All main sections after the hero share one consistent outer content frame
-- Section titles, rules, and content boundaries align to the same horizontal system
+- Section titles and content boundaries share one horizontal system; headings have no adjacent rules
 - Mobile layouts preserve the same overall frame while adjusting metadata and spacing for scanability
+- A warm cream background slowly shifts through sage, peach, and lavender washes with forest-green text and accents; Nunito Sans supplies display typography and Manrope supplies body text
+- The portrait remains on the right on desktop and stacks below the introduction on mobile
+- Navigation uses inline section links on desktop and a disclosure menu on smaller screens, with Escape, outside-click, and link-selection dismissal
 
 ## Rendering Strategy
 - Static generation for the full site
@@ -30,7 +33,7 @@ The site uses a single-page Next.js App Router setup with static export enabled.
 
 ## Motion Layer
 - Motion is part of the product experience, not decorative garnish
-- Use subtle reveals, refined hover states, soft portrait motion, and a restrained greeting rotation
+- Use subtle reveals, refined hover states, soft portrait motion, a restrained greeting rotation, and slow background colour movement
 - Respect `prefers-reduced-motion`
 - Avoid gimmicks and startup-marketing animation patterns
 
@@ -38,6 +41,7 @@ The site uses a single-page Next.js App Router setup with static export enabled.
 - The hero portrait uses a purpose-sized optimized asset for static hosting
 - Images remain compatible with GitHub Pages through `images.unoptimized`
 - Typography, spacing, and interaction layers have been refined for mobile readability and perceived smoothness
+- Phosphor icons provide the decorative four-point stars and contact-link brand icons
 
 ## GitHub Pages Constraints
 - `output: "export"`

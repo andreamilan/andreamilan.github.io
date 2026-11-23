@@ -28,7 +28,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["Manrope Variable", "Avenir Next", "Segoe UI", "sans-serif"],
-        display: ["Fraunces", "Iowan Old Style", "Georgia", "serif"]
+        display: ["Nunito Sans Variable", "Avenir Next", "sans-serif"]
       }
     }
   },

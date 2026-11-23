@@ -7,7 +7,7 @@
 
 ## Product Shape
 - Single-page website with anchored sections.
-- Dark mode is the default visual direction.
+- Use a warm cream background with subtle shifting sage, peach, and lavender shades, and forest-green text and accents.
 - Current page structure:
   - Hero
   - Overview
@@ -22,7 +22,7 @@
 - Tone should be professional, calm, sharp, and concise.
 - Avoid third-person biography tone, resume-dump density, long explanatory blocks, and generic portfolio language.
 - Keep the current role as the only featured experience entry.
-- Keep previous roles compact, secondary, and action-led.
+- Keep previous roles compact, secondary, and action-led, with full descriptions available through native timeline disclosures.
 - Keep Education separate from Experience.
 - Keep Principles as a concise positioning section for product leadership.
 - Medium must remain a secondary link only.
@@ -33,7 +33,7 @@
 - Keep the site editorial and design-led rather than SaaS-like or template-like.
 - Preserve the hero portrait on the right.
 - Keep one consistent section frame after the hero.
-- Use section title, separator, and content as the primary organizing pattern.
+- Use section title and content as the primary organizing pattern; do not add rules beside section headings.
 - Maintain calm spacing, disciplined alignment, and clear visual hierarchy.
 - Avoid component-gallery repetition, app-shell chrome, and unnecessary visual clutter.
 

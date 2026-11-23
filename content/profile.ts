@@ -3,8 +3,13 @@ export type TimelineEntry = {
   title: string;
   location: string;
   period: string;
-  summary: string;
+  summary?: string;
   details?: string[];
+  positions?: {
+    title: string;
+    period: string;
+    summary: string;
+  }[];
 };
 
 export type EducationItem = {
@@ -60,19 +65,23 @@ export const timeline: TimelineEntry[] = [
   },
   {
     company: "Subito",
-    title: "Product Team Lead",
+    title: "Product Team Lead / Senior Product Manager",
     location: "Milan, Italy",
-    period: "2020 - 2022",
-    summary:
-      "I led a product tribe focused on growth, safety, and monetisation in one of Italy's leading consumer marketplaces."
-  },
-  {
-    company: "Subito",
-    title: "Senior Product Manager",
-    location: "Milan, Italy",
-    period: "2019 - 2020",
-    summary:
-      "I led acquisition, retention, and referral, with a strong focus on experimentation."
+    period: "2019 - 2022",
+    positions: [
+      {
+        title: "Product Team Lead",
+        period: "2020 - 2022",
+        summary:
+          "I led a product tribe focused on growth, safety, and monetisation in one of Italy's leading consumer marketplaces."
+      },
+      {
+        title: "Senior Product Manager",
+        period: "2019 - 2020",
+        summary:
+          "I led acquisition, retention, and referral, with a strong focus on experimentation."
+      }
+    ]
   },
   {
     company: "Jobtome",
@@ -89,22 +98,6 @@ export const timeline: TimelineEntry[] = [
     period: "2015 - 2017",
     summary:
       "I worked on localisation, operational systems, and market-specific product adaptations to support expansion across European markets."
-  },
-  {
-    company: "DEMnet",
-    title: "Web Marketing Specialist",
-    location: "Tallinn, Estonia",
-    period: "2014 - 2015",
-    summary:
-      "I managed SEO and SEM for e-commerce clients."
-  },
-  {
-    company: "Arrow Electronics",
-    title: "Junior Project Manager",
-    location: "Milan, Italy",
-    period: "2014",
-    summary:
-      "I supported an international ERP implementation across Europe, Asia, and the United States."
   }
 ];
 

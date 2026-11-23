@@ -9,7 +9,7 @@ export const siteConfig = {
     medium: "https://andreamilan7.medium.com/"
   },
   navigation: [
-    { href: "#intro", label: "Intro" },
+    { href: "#overview", label: "Overview" },
     { href: "#experience", label: "Experience" },
     { href: "#education", label: "Education" },
     { href: "#principles", label: "Principles" },
