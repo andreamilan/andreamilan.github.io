@@ -42,7 +42,7 @@ export function EducationTimeline({ entries }: { entries: EducationItem[] }) {
   return (
     <ol className="education-timeline" aria-label="My education timeline">
       {entries.map((entry, index) => (
-        <li key={`${entry.school}-${entry.degree}`} className="education-step" style={{ "--education-offset": `${Math.max(0, timelineStartOffset - index * 12)}%` } as CSSProperties}>
+        <li key={`${entry.school}-${entry.degree}`} className="education-step" style={{ "--education-offset": `${index === 0 ? timelineStartOffset : (entries.length - index - 1) * 12}%` } as CSSProperties}>
           <p className="education-year">{entry.period}</p>
           <h3>{entry.school}</h3>
           <p className="education-degree">{entry.degree}</p>

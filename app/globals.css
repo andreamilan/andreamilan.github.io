@@ -210,7 +210,8 @@ body::before {
 .timeline-description { padding: 0 30px 28px; font-size: 16px; line-height: 1.7; }
 .timeline-description p + p { margin-top: 13px; }
 .timeline-description .timeline-location { font-size: 12px; letter-spacing: 0.6px; color: #c0d5c4; }
-.education-step { width: calc(100% - var(--education-offset)); margin-left: var(--education-offset); margin-bottom: 18px; border-radius: 34px; background: #dce5d0b3; padding: 28px 34px; }
+.education-step { width: calc(100% - var(--education-offset)); max-width: 820px; margin-left: var(--education-offset); margin-bottom: 18px; border-radius: 34px; background: #dce5d0b3; padding: 28px 34px; }
+.education-step:first-child { max-width: none; }
 .education-year { color: #527047; font-size: 14px; font-weight: 750; margin-bottom: 10px; }
 .education-step h3 { font-family: "Nunito Sans Variable", sans-serif; font-size: 25px; font-weight: 800; line-height: 1.25; letter-spacing: -0.5px; }
 .education-degree { margin-top: 7px; font-size: 17px; line-height: 1.55; color: var(--text-soft); }
