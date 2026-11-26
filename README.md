@@ -40,8 +40,8 @@ Andrea Milan's website is a single-page editorial personal website built for Git
 - Single-page, anchored editorial layout
 - Light palette with forest-green text and accents
 - Portrait-led hero with a rotating multilingual greeting
-- A staggered career timeline with the current role open and previous roles expandable
-- Education separated from Experience
+- A staggered career timeline with all current-role content visible by default and previous roles expandable
+- Education separated from Experience, with matching timeline alignment
 - LinkedIn as the primary CTA
 - Medium as a secondary link only
 - No standalone About, Writing, or Contact pages

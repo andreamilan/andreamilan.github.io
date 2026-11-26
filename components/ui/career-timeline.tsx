@@ -2,11 +2,13 @@ import type { CSSProperties } from "react";
 import { CaretDown } from "@phosphor-icons/react/dist/ssr";
 import type { TimelineEntry, EducationItem } from "@/content/profile";
 
+const timelineStartOffset = 35;
+
 export function CareerTimeline({ entries }: { entries: TimelineEntry[] }) {
   return (
     <ol className="career-timeline" aria-label="My career timeline">
       {entries.map((entry, index) => {
-        const offset = entries.length > 1 ? ((entries.length - index - 1) / (entries.length - 1)) * 35 : 0;
+        const offset = entries.length > 1 ? ((entries.length - index - 1) / (entries.length - 1)) * timelineStartOffset : 0;
         const width = index === 0 ? 100 - offset : Math.max(50, 60 - index * 1.5);
         return (
           <li key={`${entry.company}-${entry.title}`} className="timeline-item" style={{ "--timeline-offset": `${offset}%`, "--timeline-width": `${width}%` } as CSSProperties}>
@@ -26,12 +28,7 @@ export function CareerTimeline({ entries }: { entries: TimelineEntry[] }) {
                     <p>{position.summary}</p>
                   </div>
                 ))}
-                {entry.details?.length ? (
-                  <details className="career-notes">
-                    <summary>More about my role <CaretDown size={15} weight="bold" aria-hidden="true" /></summary>
-                    {entry.details.map(detail => <p key={detail}>{detail}</p>)}
-                  </details>
-                ) : null}
+                {entry.details?.map(detail => <p key={detail}>{detail}</p>)}
               </div>
             </details>
           </li>
@@ -45,7 +42,7 @@ export function EducationTimeline({ entries }: { entries: EducationItem[] }) {
   return (
     <ol className="education-timeline" aria-label="My education timeline">
       {entries.map((entry, index) => (
-        <li key={`${entry.school}-${entry.degree}`} className="education-step" style={{ "--education-offset": `${(entries.length - index - 1) * 12}%` } as CSSProperties}>
+        <li key={`${entry.school}-${entry.degree}`} className="education-step" style={{ "--education-offset": `${Math.max(0, timelineStartOffset - index * 12)}%` } as CSSProperties}>
           <p className="education-year">{entry.period}</p>
           <h3>{entry.school}</h3>
           <p className="education-degree">{entry.degree}</p>
